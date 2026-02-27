@@ -1,0 +1,31 @@
+---
+layout: layouts/base.njk
+---
+<article>
+  <div class="l-wrapper">
+    <header class="seed-hero">
+      <a href="/seeds/" class="seed-back">&#8592; Design Seeds</a>
+      {% if category %}
+        <p class="seed-hero__category" data-category="{{ category | lower }}">{{ category }}</p>
+      {% endif %}
+      <h1 class="seed-hero__title">{{ title }}</h1>
+      {% if description %}
+        <p class="seed-hero__description">{{ description }}</p>
+      {% endif %}
+    </header>
+
+    <div class="l-prose prose">
+      {{ content | safe }}
+    </div>
+
+    {% if tags and tags | length %}
+      <footer class="seed-footer">
+        <div class="seed-footer__tags">
+          {% for tag in tags %}
+            <span class="tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+      </footer>
+    {% endif %}
+  </div>
+</article>

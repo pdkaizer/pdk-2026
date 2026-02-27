@@ -1,0 +1,30 @@
+{% set project = project %}
+<div class="project-card-wrap">
+  <a class="project-card" href="{{ project.url }}">
+    <div class="project-card__image">
+      {% if project.data.thumbnail %}
+        <img
+          src="{{ project.data.thumbnail }}"
+          alt="{{ project.data.thumbnail_alt or project.data.title }}"
+          loading="lazy"
+        />
+      {% endif %}
+    </div>
+    <div class="project-card__meta">
+      {% if project.data.category %}
+        <span class="project-card__category">{{ project.data.category }}</span>
+      {% endif %}
+      <h3 class="project-card__title">{{ project.data.title }}</h3>
+      {% if project.data.summary %}
+        <p class="project-card__summary">{{ project.data.summary }}</p>
+      {% endif %}
+      {% if project.data.tags %}
+        <div>
+          {% for tag in project.data.tags %}
+            <span class="tag">{{ tag }}</span>
+          {% endfor %}
+        </div>
+      {% endif %}
+    </div>
+  </a>
+</div>

@@ -1,0 +1,67 @@
+---
+layout: layouts/base.njk
+title: Home
+---
+<div class="l-wrapper">
+  <section class="hero">
+    <p class="hero__eyebrow">Product Designer</p>
+    <h1 class="hero__headline">Design that shapes how people think and act.</h1>
+    <p class="hero__body">
+      I am a digital product designer with a passion for user focused digital products that are highly functional and beautifully designed.
+    </p>
+    <div class="hero__actions">
+      <a href="/work/" class="btn btn--primary">View my work</a>
+      <a href="/about/" class="btn btn--secondary">About me</a>
+    </div>
+  </section>
+</div>
+
+{% if collections.caseStudies | length %}
+<section class="l-wrapper l-section">
+  <div class="section-header">
+    <p class="section-label">Selected work</p>
+    <a href="/work/" class="btn btn--secondary">All projects</a>
+  </div>
+
+  <div class="l-grid">
+    {% for project in collections.caseStudies | limit(4) %}
+      {% set project = project %}
+      {% include "components/project-card.njk" %}
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
+{% if collections.photoGalleries | length %}
+<section class="l-wrapper l-section">
+  <div class="section-header">
+    <p class="section-label">Selected photos</p>
+    <a href="/photos/" class="btn btn--secondary">All galleries</a>
+  </div>
+
+  <div class="l-grid">
+    {% for gallery in collections.photoGalleries | limit(1) %}
+      <a class="gallery-card" href="{{ gallery.url }}">
+        <div class="gallery-card__image">
+          {% if gallery.data.cover %}
+            <img
+              src="{{ gallery.data.cover }}"
+              alt="{{ gallery.data.cover_alt or gallery.data.title }}"
+              loading="lazy"
+            />
+          {% endif %}
+          <span class="gallery-card__count">
+            {{ gallery.data.photos | length }} photo{% if gallery.data.photos | length != 1 %}s{% endif %}
+          </span>
+        </div>
+        <div class="gallery-card__meta">
+          <h2 class="gallery-card__title">{{ gallery.data.title }}</h2>
+          {% if gallery.data.location %}
+            <p class="gallery-card__location">{{ gallery.data.location }}</p>
+          {% endif %}
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}

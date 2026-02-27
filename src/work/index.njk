@@ -1,0 +1,28 @@
+---
+layout: layouts/base.njk
+title: Work
+description: Selected case studies in product design, UX, and systems thinking.
+permalink: /work/
+---
+<div class="l-wrapper l-section">
+  <header class="l-stack">
+    <p class="section-label">Work</p>
+    <h1>Case studies</h1>
+    <p>
+      A selection of product design projects across B2B, consumer, and design systems.
+    </p>
+  </header>
+
+  <hr class="divider" />
+
+  {% if collections.caseStudies | length %}
+    <div class="l-grid">
+      {% for project in collections.caseStudies %}
+        {% set project = project %}
+        {% include "components/project-card.njk" %}
+      {% endfor %}
+    </div>
+  {% else %}
+    <p>Case studies coming soon.</p>
+  {% endif %}
+</div>

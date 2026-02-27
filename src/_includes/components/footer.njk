@@ -1,0 +1,15 @@
+<footer class="site-footer">
+  <div class="l-wrapper">
+    <div class="site-footer__info">
+      <p>&copy; {{ site.author }}</p>
+      <p>Product designer based in {{ site.location }}</p>
+    </div>
+    <nav class="footer-social" aria-label="Social media">
+      {% for item in site.social %}
+        <a href="{{ item.url }}" class="footer-social__link" aria-label="{{ item.label }}" rel="noopener noreferrer" target="_blank">
+          <i class="{{ item.icon }}" aria-hidden="true"></i>
+        </a>
+      {% endfor %}
+    </nav>
+  </div>
+</footer>

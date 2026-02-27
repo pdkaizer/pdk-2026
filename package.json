@@ -1,0 +1,24 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "start": "npm-run-all --parallel dev:*",
+    "dev:11ty": "eleventy --serve",
+    "dev:css": "postcss src/assets/css/main.css -o _site/assets/css/main.css --watch",
+    "build": "npm-run-all build:css build:11ty",
+    "build:css": "postcss src/assets/css/main.css -o _site/assets/css/main.css",
+    "build:11ty": "eleventy"
+  },
+  "devDependencies": {
+    "@11ty/eleventy": "^3.0.0",
+    "npm-run-all2": "^6.0.0",
+    "postcss": "^8.0.0",
+    "postcss-cli": "^11.0.0",
+    "postcss-import": "^16.0.0",
+    "postcss-nesting": "^13.0.0"
+  },
+  "dependencies": {
+    "rss-parser": "^3.13.0"
+  }
+}

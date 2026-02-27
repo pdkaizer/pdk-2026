@@ -1,0 +1,46 @@
+---
+layout: layouts/base.njk
+---
+<div class="l-wrapper">
+  <header class="gallery-hero">
+    <a href="/photos/" class="gallery-back">← All galleries</a>
+    <h1 class="gallery-hero__title">{{ title }}</h1>
+    {% if description %}
+      <p class="gallery-hero__description">{{ description }}</p>
+    {% endif %}
+    <div class="gallery-hero__meta">
+      {% if location %}
+        <span>{{ location }}</span>
+      {% endif %}
+      {% if date %}
+        <time datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>
+      {% endif %}
+    </div>
+  </header>
+</div>
+
+{% if photos | length %}
+  <div class="l-wrapper">
+    <div class="photo-grid">
+      {% for photo in photos %}
+        <figure class="photo-grid__item">
+          <img
+            src="{{ photo.src }}"
+            alt="{{ photo.alt or '' }}"
+            loading="lazy"
+            decoding="async"
+          />
+          {% if photo.caption %}
+            <figcaption>{{ photo.caption }}</figcaption>
+          {% endif %}
+        </figure>
+      {% endfor %}
+    </div>
+  </div>
+{% endif %}
+
+{% if content | trim %}
+  <div class="l-wrapper l-prose prose" style="margin-block-top: var(--space-16);">
+    {{ content | safe }}
+  </div>
+{% endif %}

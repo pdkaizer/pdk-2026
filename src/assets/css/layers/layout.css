@@ -1,0 +1,56 @@
+/* Page-level layout primitives */
+
+/* Outer wrapper — constrains and centers content */
+.l-wrapper {
+  width: 100%;
+  max-width: var(--max-width-content);
+  margin-inline: auto;
+  padding-inline: var(--space-6);
+
+  @media (width >= 64rem) {
+    padding-inline: var(--space-10);
+  }
+}
+
+/* Site frame — sticky header, scrollable main, footer */
+.l-site {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  min-height: 100dvh;
+}
+
+/* Generic stack — vertical rhythm */
+.l-stack {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-6);
+}
+
+/* Section spacing */
+.l-section {
+  padding-block: var(--space-12);
+}
+
+/* Two-column: sidebar + main (media query: global layout shift) */
+.l-sidebar {
+  display: grid;
+  gap: var(--space-12);
+
+  @media (width >= 64rem) {
+    grid-template-columns: 18rem 1fr;
+    align-items: start;
+  }
+}
+
+/* Auto-fill grid — for project grids, writing lists */
+.l-grid {
+  display: grid;
+  gap: var(--space-8);
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 22rem), 1fr));
+}
+
+/* Prose column — centered, comfortable reading width */
+.l-prose {
+  max-width: var(--max-width-prose);
+  margin-inline: auto;
+}

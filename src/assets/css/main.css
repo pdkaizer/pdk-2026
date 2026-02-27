@@ -1,0 +1,8 @@
+/* Declare layer order first — controls specificity cascade */
+@layer reset, base, layout, components, pages;
+
+@import "layers/reset.css" layer(reset);
+@import "layers/base.css" layer(base);
+@import "layers/layout.css" layer(layout);
+@import "layers/components.css" layer(components);
+@import "layers/pages.css" layer(pages);

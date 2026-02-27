@@ -1,0 +1,57 @@
+---
+layout: layouts/base.njk
+---
+<article>
+  <div class="l-wrapper">
+    <header class="case-study-hero">
+      {% if category %}
+        <p class="case-study-hero__category">{{ category }}</p>
+      {% endif %}
+      <h1 class="case-study-hero__title">{{ title }}</h1>
+      {% if summary %}
+        <p class="case-study-hero__summary">{{ summary }}</p>
+      {% endif %}
+    </header>
+
+    <dl class="case-study-meta">
+      {% if role %}
+        <div class="case-study-meta__item">
+          <dt>Role</dt>
+          <dd>{{ role }}</dd>
+        </div>
+      {% endif %}
+      {% if year %}
+        <div class="case-study-meta__item">
+          <dt>Year</dt>
+          <dd>{{ year }}</dd>
+        </div>
+      {% endif %}
+      {% if company %}
+        <div class="case-study-meta__item">
+          <dt>Company</dt>
+          <dd>{{ company }}</dd>
+        </div>
+      {% endif %}
+      {% if tags and tags | length %}
+        <div class="case-study-meta__item">
+          <dt>Disciplines</dt>
+          <dd>{{ tags | join(", ") }}</dd>
+        </div>
+      {% endif %}
+    </dl>
+  </div>
+
+  {% if hero_image %}
+    <div class="l-wrapper">
+      <figure class="case-study-image">
+        <img src="{{ hero_image }}" alt="{{ hero_image_alt or title }}" />
+      </figure>
+    </div>
+  {% endif %}
+
+  <div class="l-wrapper">
+    <div class="l-prose prose">
+      {{ content | safe }}
+    </div>
+  </div>
+</article>

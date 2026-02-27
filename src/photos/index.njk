@@ -1,0 +1,43 @@
+---
+layout: layouts/base.njk
+title: Photos
+description: Photo galleries.
+permalink: /photos/
+---
+<div class="l-wrapper l-section">
+  <div class="l-stack">
+    <p class="section-label">Photos</p>
+    <h1>Photo Galleries</h1>
+  </div>
+
+  <hr class="divider" />
+
+  {% if collections.photoGalleries | length %}
+    <div class="l-grid">
+      {% for gallery in collections.photoGalleries %}
+        <a class="gallery-card" href="{{ gallery.url }}">
+          <div class="gallery-card__image">
+            {% if gallery.data.cover %}
+              <img
+                src="{{ gallery.data.cover }}"
+                alt="{{ gallery.data.cover_alt or gallery.data.title }}"
+                loading="lazy"
+              />
+            {% endif %}
+            <span class="gallery-card__count">
+              {{ gallery.data.photos | length }} photo{% if gallery.data.photos | length != 1 %}s{% endif %}
+            </span>
+          </div>
+          <div class="gallery-card__meta">
+            <h2 class="gallery-card__title">{{ gallery.data.title }}</h2>
+            {% if gallery.data.location %}
+              <p class="gallery-card__location">{{ gallery.data.location }}</p>
+            {% endif %}
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p>Galleries coming soon.</p>
+  {% endif %}
+</div>

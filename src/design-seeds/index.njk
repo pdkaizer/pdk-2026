@@ -1,0 +1,29 @@
+---
+layout: layouts/base.njk
+title: Design Seeds
+permalink: /seeds/
+---
+<div class="l-wrapper">
+  <header class="l-section">
+    <p class="section-label">Design Seeds</p>
+    <h1 class="seeds-page-title">Short thoughts on design craft</h1>
+    <p class="seeds-page-description">Seeds are compact explorations — a concept, a principle, or an observation worth sitting with.</p>
+  </header>
+
+  <div class="seeds-grid">
+    {% for seed in collections.designSeeds %}
+      <a class="seed-card" href="{{ seed.url }}" data-category="{{ seed.data.category | lower }}">
+        <span class="seed-card__category">{{ seed.data.category }}</span>
+        <h2 class="seed-card__title">{{ seed.data.title }}</h2>
+        <p class="seed-card__description">{{ seed.data.description }}</p>
+        {% if seed.data.tags and seed.data.tags | length %}
+          <div class="seed-card__tags">
+            {% for tag in seed.data.tags %}
+              <span class="tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </a>
+    {% endfor %}
+  </div>
+</div>
