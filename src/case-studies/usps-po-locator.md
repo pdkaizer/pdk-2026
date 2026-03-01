@@ -5,7 +5,7 @@ category: Product Design
 role: Lead Designer
 company: USPS.com
 year: 2022
-order: 1
+order: 3
 thumbnail: /assets/images/work/usps-po-locator.png
 tags:
   - UX Research

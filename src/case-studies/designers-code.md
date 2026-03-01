@@ -1,13 +1,12 @@
 ---
-title: Redesigning the Medicaid.gov Design System
-summary: How we modernized the experience of finding a USPS location
+title: From FIGMA to Fluent Code
+summary: A structured path for visual designers to understand modern HTML semantics and CSS architecture.
 category: Product Design
 role: Lead Designer
-company: Medicaid.gov
-year: 2018
-order: 4
-thumbnail: /assets/images/work/Medicaid-2018.png
-hero_image: /assets/images/work/Medicaid-2018.png
+company: USPS.com
+year: 2026
+order: 1
+thumbnail: /assets/images/work/designers-code.png
 tags:
   - UX Research
   - Interaction Design

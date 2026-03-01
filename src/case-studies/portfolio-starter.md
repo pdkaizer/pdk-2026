@@ -1,13 +1,12 @@
 ---
-title: Redesigning the Medicaid.gov Design System
-summary: How we modernized the experience of finding a USPS location
+title: Portfolio Starter Repo
+summary: A starter code compainion to FIGMA to Fluent Code
 category: Product Design
 role: Lead Designer
-company: Medicaid.gov
-year: 2018
-order: 4
-thumbnail: /assets/images/work/Medicaid-2018.png
-hero_image: /assets/images/work/Medicaid-2018.png
+company: USPS.com
+year: 2026
+order: 2
+thumbnail: /assets/images/work/portfolio-starter.png
 tags:
   - UX Research
   - Interaction Design
