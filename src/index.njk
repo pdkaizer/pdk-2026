@@ -24,7 +24,7 @@ title: Home
   </div>
 
   <div class="l-grid">
-    {% for project in collections.caseStudies | limit(4) %}
+    {% for project in collections.caseStudies | limit(2) %}
       {% set project = project %}
       {% include "components/project-card.njk" %}
     {% endfor %}
