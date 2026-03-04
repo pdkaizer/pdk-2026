@@ -18,6 +18,7 @@ module.exports = {
     { label: "Seeds", url: "/seeds/" },
     { label: "Writing", url: "/writing/" },
     { label: "About", url: "/about/" },
+    { label: "Gear", url: "/gear/" },
     { label: "Contact", url: "/contact/" },
   ],
 };
