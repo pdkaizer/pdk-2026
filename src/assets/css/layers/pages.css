@@ -197,6 +197,10 @@
   display: grid;
   gap: var(--space-6);
   max-width: 40rem;
+
+  & .btn {
+    justify-self: start;
+  }
 }
 
 .form-field {

@@ -526,7 +526,7 @@
 .hero__body {
   font-size: var(--text-lg);
   color: var(--color-text-muted);
-  max-width: 50ch;
+  max-width: 80ch;
   margin-block-end: var(--space-10);
 }
 
@@ -544,6 +544,7 @@
   align-items: center;
   gap: var(--space-2);
   padding: var(--space-3) var(--space-6);
+  font-family: inherit;
   font-size: var(--text-sm);
   text-decoration: none;
   border: 1px solid currentColor;
@@ -551,6 +552,8 @@
   cursor: pointer;
   transition: background-color var(--duration-fast) ease, color var(--duration-fast) ease;
   letter-spacing: 0.02em;
+  appearance: none;
+  background: none;
 }
 
 .btn--primary {
