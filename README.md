@@ -26,6 +26,3 @@ npm run build
 
 Outputs to `_site/`.
 
-## Deploy
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/pdkaizer/pdk-2026)
