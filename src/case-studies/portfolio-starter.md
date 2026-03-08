@@ -1,7 +1,7 @@
 ---
 title: Portfolio Starter Repo
 summary: A starter code compainion to FIGMA to Fluent Code
-category: Product Design
+category: Creative Side Projects
 role: Lead Designer
 company: USPS.com
 year: 2026

@@ -1,5 +1,12 @@
 /* Page-specific styles — overrides for individual pages */
 
+/* ─── Work index ──────────────────────────────────────────── */
+
+.work-category__divider {
+  margin-block: var(--space-16);
+}
+
+
 /* ─── Case Study detail ───────────────────────────────────── */
 
 .case-study-hero {

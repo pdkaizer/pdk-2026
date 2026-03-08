@@ -1,7 +1,7 @@
 ---
 title: From FIGMA to Fluent Code
 summary: A structured path for visual designers to understand modern HTML semantics and CSS architecture.
-category: Product Design
+category: Creative Side Projects
 role: Lead Designer
 company: USPS.com
 year: 2026

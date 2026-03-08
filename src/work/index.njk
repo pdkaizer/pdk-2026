@@ -16,12 +16,41 @@ permalink: /work/
   <hr class="divider" />
 
   {% if collections.caseStudies | length %}
-    <div class="l-grid">
+    {% set categories = [
+      {
+        name: "Creative Side Projects",
+        description: "Personal explorations in design education, tooling, and craft."
+      },
+      {
+        name: "Federal",
+        description: "Design work in service of the public — modernizing federal digital experiences at scale."
+      }
+    ] %}
+
+    {% for cat in categories %}
+      {% set catProjects = [] %}
       {% for project in collections.caseStudies %}
-        {% set project = project %}
-        {% include "components/project-card.njk" %}
+        {% if project.data.category == cat.name %}
+          {% set catProjects = catProjects.concat([project]) %}
+        {% endif %}
       {% endfor %}
-    </div>
+
+      {% if catProjects | length %}
+        <section class="l-stack work-category">
+          <header class="category-header l-stack">
+            <h2>{{ cat.name }}</h2>
+            <p>{{ cat.description }}</p>
+          </header>
+          <div class="l-grid">
+            {% for project in catProjects %}
+              {% set project = project %}
+              {% include "components/project-card.njk" %}
+            {% endfor %}
+          </div>
+        </section>
+        {% if not loop.last %}<hr class="divider work-category__divider" />{% endif %}
+      {% endif %}
+    {% endfor %}
   {% else %}
     <p>Case studies coming soon.</p>
   {% endif %}

@@ -1,7 +1,7 @@
 ---
 title: Redesigning the experience of finding a USPS Location
 summary: How we modernized the experience of finding a USPS location
-category: Product Design
+category: Federal
 role: Lead Designer
 company: USPS.com
 year: 2022

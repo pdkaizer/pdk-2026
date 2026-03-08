@@ -1,7 +1,7 @@
 ---
 title: Redesigning the Medicaid.gov Design System
 summary: How we modernized the experience of finding a USPS location
-category: Product Design
+category: Federal
 role: Lead Designer
 company: Medicaid.gov
 year: 2018
