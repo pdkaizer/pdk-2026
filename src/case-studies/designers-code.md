@@ -5,7 +5,7 @@ category: Creative Side Projects
 role: Lead Designer
 company: USPS.com
 year: 2026
-order: 1
+order: 2
 thumbnail: /assets/images/work/designers-code.png
 tags:
   - UX Research

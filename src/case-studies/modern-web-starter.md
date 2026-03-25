@@ -1,16 +1,16 @@
 ---
-title: Portfolio Starter Repo
-summary: A starter code compainion to FIGMA to Fluent Code
+title: A Modern Web Starter
+summary: A lean, opinionated foundation using semantic HTML, modern CSS with cascade layers, and vanilla JavaScript.
 category: Creative Side Projects
 role: Lead Designer
-company: USPS.com
+company: Design Byes Media
 year: 2026
-order: 3
-thumbnail: /assets/images/work/portfolio-starter.png
+order: 1
+thumbnail: /assets/images/work/modern-we-starter.png
 tags:
-  - UX Research
+  - AI Assisted design and development
   - Interaction Design
-  - Map based design
+  - Moder CSS
   - Prototyping
 ---
 
