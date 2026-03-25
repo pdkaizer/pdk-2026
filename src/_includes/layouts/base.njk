@@ -7,6 +7,23 @@
 
     <title>{% if title %}{{ title }} — {{ site.author }}{% else %}{{ site.author }} — {{ site.tagline }}{% endif %}</title>
 
+    <!-- Open Graph -->
+    {% set ogTitle %}{% if title %}{{ title }} — {{ site.author }}{% else %}{{ site.author }} — {{ site.tagline }}{% endif %}{% endset %}
+    {% set ogDesc %}{{ description or site.description }}{% endset %}
+    {% set ogImg %}{{ ogImage or thumbnail or site.defaultOgImage }}{% endset %}
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="{{ site.author }}" />
+    <meta property="og:title" content="{{ ogTitle }}" />
+    <meta property="og:description" content="{{ ogDesc }}" />
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}" />
+    <meta property="og:image" content="{{ site.url }}{{ ogImg }}" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="{{ ogTitle }}" />
+    <meta name="twitter:description" content="{{ ogDesc }}" />
+    <meta name="twitter:image" content="{{ site.url }}{{ ogImg }}" />
+
     <link rel="stylesheet" href="/assets/css/main.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />

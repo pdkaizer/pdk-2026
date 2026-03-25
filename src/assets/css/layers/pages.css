@@ -416,7 +416,31 @@
 
 /* ─── Gear page ───────────────────────────────────────────── */
 
-.gear-intro p {
+.gear-intro {
+  display: grid;
+  gap: var(--space-6);
+  padding-block: var(--space-16);
+
+  & .section-label {
+    padding-block-start: var(--space-1);
+  }
+
+  @media (width >= 48rem) {
+    grid-template-columns: 1fr 2fr;
+    gap: var(--space-12);
+    align-items: start;
+  }
+}
+
+.gear-intro__headline {
+  font-family: var(--font-serif);
+  font-size: var(--text-4xl);
+  font-weight: normal;
+  line-height: 1.1;
+  margin-block-end: var(--space-10);
+}
+
+.gear-intro__body .prose {
   max-width: none;
 }
 
