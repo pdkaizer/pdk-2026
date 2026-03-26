@@ -4,12 +4,19 @@ layout: layouts/base.njk
 <article>
   <div class="l-wrapper">
     <header class="case-study-hero">
-      {% if category %}
-        <p class="case-study-hero__category">{{ category }}</p>
-      {% endif %}
-      <h1 class="case-study-hero__title">{{ title }}</h1>
-      {% if summary %}
-        <p class="case-study-hero__summary">{{ summary }}</p>
+      <div class="case-study-hero__text">
+        {% if category %}
+          <p class="case-study-hero__category">{{ category }}</p>
+        {% endif %}
+        <h1 class="case-study-hero__title">{{ title }}</h1>
+        {% if summary %}
+          <p class="case-study-hero__summary">{{ summary }}</p>
+        {% endif %}
+      </div>
+      {% if hero_portrait %}
+        <figure class="case-study-hero__image">
+          <img src="{{ hero_portrait }}" alt="{{ hero_portrait_alt or title }}" />
+        </figure>
       {% endif %}
     </header>
 
@@ -50,7 +57,7 @@ layout: layouts/base.njk
   {% endif %}
 
   <div class="l-wrapper">
-    <div class="l-prose prose">
+    <div class="prose">
       {{ content | safe }}
     </div>
   </div>

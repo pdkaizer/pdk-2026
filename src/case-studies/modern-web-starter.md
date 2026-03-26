@@ -7,6 +7,8 @@ company: Design Byes Media
 year: 2026
 order: 1
 thumbnail: /assets/images/work/modern-we-starter.png
+hero_portrait: /assets/images/work/modern-we-starter.png
+hero_portrait_alt: A lean, opinionated foundation using semantic HTML, modern CSS # optional
 tags:
   - AI Assisted design and development
   - Interaction Design

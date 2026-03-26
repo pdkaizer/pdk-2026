@@ -9,8 +9,21 @@
 
 /* ─── Case Study detail ───────────────────────────────────── */
 
+article:has(.case-study-hero) .prose p {
+  max-width: 90ch;
+}
+
 .case-study-hero {
   padding-block: var(--space-16) var(--space-12);
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--space-10);
+  align-items: start;
+
+  @media (width >= 48rem) {
+    grid-template-columns: 1fr auto;
+    gap: var(--space-16);
+  }
 
   & .case-study-hero__category {
     font-size: var(--text-xs);
@@ -32,6 +45,22 @@
     font-size: var(--text-lg);
     color: var(--color-text-muted);
     max-width: 54ch;
+    margin-block-end: 0;
+  }
+
+  & .case-study-hero__image {
+    width: clamp(10rem, 20vw, 18rem);
+    aspect-ratio: 3 / 4;
+    border-radius: 4px;
+    overflow: hidden;
+    background-color: var(--color-bg-subtle);
+
+    & img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
   }
 }
 

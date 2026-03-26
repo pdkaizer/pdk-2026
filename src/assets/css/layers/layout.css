@@ -54,3 +54,8 @@
   max-width: var(--max-width-prose);
   margin-inline: auto;
 }
+
+/* Left-aligned prose — same max-width, no auto centering */
+.l-prose--flush {
+  margin-inline: 0;
+}
