@@ -11,9 +11,8 @@ hero_portrait: /assets/images/work/modern-we-starter.png
 hero_portrait_alt: A lean, opinionated foundation using semantic HTML, modern CSS # optional
 tags:
   - AI Assisted design and development
-  - Interaction Design
-  - Moder CSS
-  - Prototyping
+  - Claude Code
+  - Modern CSS
 ---
 
 ## The problem

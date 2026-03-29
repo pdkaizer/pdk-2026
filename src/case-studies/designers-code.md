@@ -7,16 +7,18 @@ company: USPS.com
 year: 2026
 order: 2
 thumbnail: /assets/images/work/designers-code.png
+hero_portrait: /assets/images/work/designers-code.png
+hero_portrait_alt: From FIGMA to Fluent Code
 tags:
-  - UX Research
-  - Interaction Design
-  - Map based design
-  - Prototyping
+  - Modern CSS
+  - AI assisted design & development
+  - Claude Code
+  - Figma
 ---
 
-## The problem
+## The objective
 
-Customers were abandoning their carts at an unusually high rate. Analytics showed the steepest drop-off happened between step 3 (shipping) and step 4 (payment) — a transition that required users to re-enter information they'd already provided.
+I wanted to create a learning path for designers using Figma to be more fluent in modern HTML, and modern CSS best practices.
 
 ## Discovery
 
