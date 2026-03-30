@@ -8,6 +8,8 @@ year: 2018
 order: 4
 thumbnail: /assets/images/work/Medicaid-2018.png
 hero_image: /assets/images/work/Medicaid-2018.png
+hero_image_alt: How we modernized the experience of finding a USPS location
+project_url: https://www.medicaid.gov
 tags:
   - UX Research
   - Interaction Design

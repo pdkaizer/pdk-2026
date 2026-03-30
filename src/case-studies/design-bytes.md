@@ -1,12 +1,15 @@
 ---
 title: Design Bytes Blog
-summary: A blob about digital design
+summary: A blog about digital design
 category: Creative Side Projects
 role: Lead Designer
 company: USPS.com
 year: 2022
 order: 3
 thumbnail: /assets/images/work/design-bytes.png
+hero_image: /assets/images/work/design-bytes.png
+hero_image_alt: A blob about digital design
+project_url: https://design-bytes.com
 tags:
   - UX Research
   - Interaction Design

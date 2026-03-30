@@ -7,8 +7,9 @@ company: USPS.com
 year: 2026
 order: 2
 thumbnail: /assets/images/work/designers-code.png
-hero_portrait: /assets/images/work/designers-code.png
-hero_portrait_alt: From FIGMA to Fluent Code
+hero_image: /assets/images/work/designers-code.png
+hero_image_alt: From FIGMA to Fluent Code
+project_url: https://designercodelearning.com
 tags:
   - Modern CSS
   - AI assisted design & development

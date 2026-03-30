@@ -7,6 +7,9 @@ company: USPS.com
 year: 2017
 order: 4
 thumbnail: /assets/images/work/hc-gov-600.jpg
+hero_image: /assets/images/work/hc-gov-600.jpg
+hero_image_alt: A user-centric, massively scalable website to enable millions of Americans to obtain health insurance with ease.
+project_url: https://www.healthcare.gov
 tags:
   - UX Research
   - Interaction Design

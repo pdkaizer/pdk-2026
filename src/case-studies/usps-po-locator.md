@@ -7,6 +7,9 @@ company: USPS.com
 year: 2022
 order: 3
 thumbnail: /assets/images/work/usps-po-locator.png
+hero_image: /assets/images/work/usps-po-locator.png
+hero_image_alt: How we modernized the experience of finding a USPS location
+project_url: https://tools.usps.com/locations/
 tags:
   - UX Research
   - Interaction Design

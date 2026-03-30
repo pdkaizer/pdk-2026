@@ -7,6 +7,9 @@ company: USPS.com
 year: 2022
 order: 3
 thumbnail: /assets/images/work/streetwise.png
+hero_image: /assets/images/work/streetwise.png
+hero_image_alt: A food blog
+project_url: https://streetwisegourmet.com
 tags:
   - UX Research
   - Interaction Design

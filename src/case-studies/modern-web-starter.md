@@ -7,8 +7,9 @@ company: Design Byes Media
 year: 2026
 order: 1
 thumbnail: /assets/images/work/modern-we-starter.png
-hero_portrait: /assets/images/work/modern-we-starter.png
-hero_portrait_alt: A lean, opinionated foundation using semantic HTML, modern CSS # optional
+hero_image: /assets/images/work/modern-we-starter.png
+hero_image_alt: A lean, opinionated foundation using semantic HTML, modern CSS
+project_url:  https://modern-web-starter.com
 tags:
   - AI Assisted design and development
   - Claude Code

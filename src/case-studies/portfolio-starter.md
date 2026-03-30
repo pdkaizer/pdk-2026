@@ -7,6 +7,9 @@ company: USPS.com
 year: 2026
 order: 3
 thumbnail: /assets/images/work/portfolio-starter.png
+hero_image: /assets/images/work/portfolio-starter.png
+hero_image_alt: A starter code compainion to FIGMA to Fluent Code
+project_url: https://github.com/pdkaizer/Portfolio-Starter
 tags:
   - UX Research
   - Interaction Design

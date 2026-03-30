@@ -20,6 +20,23 @@ layout: layouts/base.njk
       {% endif %}
     </header>
 
+  </div>
+
+  {% if hero_image %}
+    <div class="l-wrapper">
+      <figure class="case-study-image">
+        <img src="{{ hero_image }}" alt="{{ hero_image_alt or title }}"{% if hero_image_width %} width="{{ hero_image_width }}"{% endif %}{% if hero_image_height %} height="{{ hero_image_height }}"{% endif %} />
+      </figure>
+    </div>
+  {% endif %}
+
+  {% if project_url %}
+    <div class="l-wrapper">
+      <a class="btn" href="{{ project_url }}" target="_blank" rel="noopener noreferrer">{{ project_url | replace("https://", "") | replace("http://", "") }}</a>
+    </div>
+  {% endif %}
+
+  <div class="l-wrapper">
     <dl class="case-study-meta">
       {% if role %}
         <div class="case-study-meta__item">
@@ -47,14 +64,6 @@ layout: layouts/base.njk
       {% endif %}
     </dl>
   </div>
-
-  {% if hero_image %}
-    <div class="l-wrapper">
-      <figure class="case-study-image">
-        <img src="{{ hero_image }}" alt="{{ hero_image_alt or title }}" />
-      </figure>
-    </div>
-  {% endif %}
 
   <div class="l-wrapper">
     <div class="prose">
