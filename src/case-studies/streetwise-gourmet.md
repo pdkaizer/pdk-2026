@@ -2,8 +2,8 @@
 title: Steetwise Gourmet
 summary: A food blog
 category: Creative Side Projects
-role: Lead Designer
-company: USPS.com
+role: Lead Designer / content contrubutor
+company: Design Bytes Media
 year: 2022
 order: 3
 thumbnail: /assets/images/work/streetwise.png
@@ -11,10 +11,10 @@ hero_image: /assets/images/work/streetwise.png
 hero_image_alt: A food blog
 project_url: https://streetwisegourmet.com
 tags:
-  - UX Research
-  - Interaction Design
-  - Map based design
-  - Prototyping
+  - Ghost
+  - AI assisted illustration
+  - Content editing
+  - Content creation
 ---
 
 ## The problem
