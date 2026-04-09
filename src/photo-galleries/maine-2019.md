@@ -1,6 +1,6 @@
 ---
 title: Coastal Maine
-description: A placeholder gallery to demonstrate the layout. Replace with your own photos.
+description: My wife and I have been going to Maine for the past 10 summers. These are from our trip in 2019 that was highlighted with a opportunity to eat at The Lost Kitchen in Freedom, ME.
 cover: /assets/images/maine/maine-2019.jpg
 cover_alt: Example cover photo
 location: Coastal Maine

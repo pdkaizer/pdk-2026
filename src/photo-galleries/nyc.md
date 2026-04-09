@@ -1,6 +1,6 @@
 ---
-title: Broolyn Botanical Gardens
-description: A placeholder gallery to demonstrate the layout. Replace with your own photos.
+title: Brooklyn Botanical Gardens
+description: We usually visit New York City several times a year. These are from a day at the Brooklyn Botanical Gardens.
 cover: /assets/images/NYC/2015-05-03-NYC-123.jpg
 cover_alt: Example cover photo
 location: NYC

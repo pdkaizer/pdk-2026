@@ -441,7 +441,7 @@
 .gallery-hero__description {
   font-size: var(--text-lg);
   color: var(--color-text-muted);
-  max-width: 54ch;
+  max-width: 70ch;
 }
 
 .gallery-hero__meta {

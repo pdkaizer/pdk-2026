@@ -1,6 +1,6 @@
 ---
 title: River Safari in Malawi 
-description: A placeholder gallery to demonstrate the layout. Replace with your own photos.
+description: In 2005 I had the honor to visit Africa to see some of the humanitarian aid work my employer at the time - Catholic Relief Services - does in southern and west Africa. These images are from a river safari in Malawi.
 cover: /assets/images/malawi-safari/malawi-boat-safari-1.jpg
 cover_alt: Example cover photo
 location: Malawi, Africa
