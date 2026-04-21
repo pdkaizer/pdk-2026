@@ -11,10 +11,10 @@ hero_image: /assets/images/work/design-bytes.png
 hero_image_alt: A blog about digital design
 project_url: https://design-bytes.com
 tags:
-  - UX Research
+  - Ghost
   - Interaction Design
-  - Map based design
-  - Prototyping
+  - Responsive Design
+  - Writing
 ---
 
 ## The problem

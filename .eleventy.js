@@ -45,6 +45,16 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("currentYear", () => new Date().getFullYear());
 
+  eleventyConfig.addFilter("rssDate", (date) => new Date(date).toUTCString());
+
+  eleventyConfig.addFilter("absoluteUrl", (url, base) => new URL(url, base).href);
+
+  eleventyConfig.addCollection("feedItems", (collectionApi) => {
+    const writing = collectionApi.getFilteredByGlob("src/writing/*.md");
+    const seeds = collectionApi.getFilteredByGlob("src/design-seeds/*.md");
+    return [...writing, ...seeds].sort((a, b) => b.date - a.date);
+  });
+
   return {
     dir: {
       input: "src",

@@ -3,29 +3,40 @@ layout: layouts/base.njk
 ---
 <article>
   <div class="l-wrapper">
+    <a href="/seeds/" class="seed-back">&#8592; Design Seeds</a>
     <header class="seed-hero">
-      <a href="/seeds/" class="seed-back">&#8592; Design Seeds</a>
-      {% if category %}
-        <p class="seed-hero__category" data-category="{{ category | lower }}">{{ category }}</p>
-      {% endif %}
-      <h1 class="seed-hero__title">{{ title }}</h1>
-      {% if description %}
-        <p class="seed-hero__description">{{ description }}</p>
-      {% endif %}
+      <div class="seed-hero__text">
+        {% if category %}
+          <p class="seed-hero__category" data-category="{{ category | lower }}">{{ category }}</p>
+        {% endif %}
+        <h1 class="seed-hero__title">{{ title }}</h1>
+        {% if description %}
+          <p class="seed-hero__description">{{ description }}</p>
+        {% endif %}
+      </div>
     </header>
+  </div>
 
-    <div class="l-prose prose">
+  <div class="l-wrapper">
+    <dl class="seed-meta">
+      {% if date %}
+        <div class="seed-meta__item">
+          <dt>Published</dt>
+          <dd>{{ date | readableDate }}</dd>
+        </div>
+      {% endif %}
+      {% if tags and tags | length %}
+        <div class="seed-meta__item">
+          <dt>Topics</dt>
+          <dd>{{ tags | join(", ") }}</dd>
+        </div>
+      {% endif %}
+    </dl>
+  </div>
+
+  <div class="l-wrapper">
+    <div class="prose">
       {{ content | safe }}
     </div>
-
-    {% if tags and tags | length %}
-      <footer class="seed-footer">
-        <div class="seed-footer__tags">
-          {% for tag in tags %}
-            <span class="tag">{{ tag }}</span>
-          {% endfor %}
-        </div>
-      </footer>
-    {% endif %}
   </div>
 </article>
