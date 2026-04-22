@@ -1,40 +1,42 @@
 ---
-title: Design Bytes Blog
-summary: A blog about digital design
+title: Design Bytes
+summary: An independent publication exploring the threads of creativity and craft behind great digital design.
 category: Creative Side Projects
-role: Lead Designer
+role: Founder & Editor
 company: Design Bytes Media
-year: 2022
-order: 3
+year: 2024
+order: 4
 thumbnail: /assets/images/work/design-bytes.png
 hero_image: /assets/images/work/design-bytes.png
-hero_image_alt: A blog about digital design
+hero_image_alt: Design Bytes — an independent design publication
 project_url: https://design-bytes.com
 tags:
+  - Content Strategy
   - Ghost
-  - Interaction Design
-  - Responsive Design
+  - Publishing
   - Writing
 ---
 
 ## The problem
 
-Customers were abandoning their carts at an unusually high rate. Analytics showed the steepest drop-off happened between step 3 (shipping) and step 4 (payment) — a transition that required users to re-enter information they'd already provided.
+Most design content online skews toward tutorials and tooling — how to use Figma, how to run a design sprint, how to prep handoff files. That's useful, but it crowds out the harder conversations about craft, philosophy, and the thinking behind good design decisions.
 
-## Discovery
+I wanted a space for the slower, more considered side of design writing. Not walkthroughs, but perspectives.
 
-I ran five moderated usability sessions and reviewed session recordings from the past 90 days. Three clear patterns emerged:
+## Approach
 
-1. Users expected shipping and billing to be combined
-2. The progress indicator created anxiety rather than clarity
-3. Error messages appeared inline but were easy to miss on mobile
+Design Bytes launched in 2024 as a free, independent publication built on Ghost. The format is deliberately mixed: short **Bytes** surface interesting discoveries, tools, and observations without demanding much from the reader; longer monthly articles go deeper into design theory, systems thinking, and the cultural influences that shape how we design.
 
-## Design process
+A bi-monthly newsletter — the Design Bytes Edition — brings recent pieces together for subscribers who prefer reading in their inbox.
 
-Starting from the existing flow, I mapped every field and its relationship to user intent. The goal was to eliminate anything that didn't directly serve the transaction.
+The content categories reflect the editorial focus: Design, Craft, AI, and a recurring **Figma Friday** series that unpacks specific Figma workflows in the context of broader design thinking.
 
-I prototyped three directions: a stepped modal approach, a single-page accordion, and a persistent summary sidebar. After one round of unmoderated testing (n=12), the single-page accordion won clearly — users understood their place and felt in control.
+## Content philosophy
+
+The publication operates from a single conviction: great design comes from designers, not tools. That means the writing treats tools as secondary — Figma, Ghost, whatever the current instrument — and keeps focus on the reasoning and judgment that tools can't replicate.
+
+Topics draw from a wide frame: the Arts and Crafts movement and its resonance with contemporary digital work, aesthetic longevity vs. trend-chasing, the role of content in design systems, and what AI means for design practice. The goal is writing that stays useful after the current news cycle moves on.
 
 ## Outcome
 
-After shipping to 100% of traffic, the checkout completion rate increased by 34%. Mobile completion improved by 47%. The support queue for checkout-related issues dropped by 22% in the first month.
+Design Bytes runs as a free platform with optional reader support, keeping the content fully accessible without a paywall. The reader base spans designers, design systems practitioners, and product teams. The publication also serves as the external writing component of the broader Design Bytes Media project — alongside the From Figma to Fluent Code curriculum and the Modern Web Starter template.

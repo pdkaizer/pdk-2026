@@ -1,40 +1,47 @@
 ---
-title: Portfolio Starter Repo
-summary: A starter code compainion to FIGMA to Fluent Code
+title: Portfolio Starter
+summary: A zero-setup HTML and CSS template built as the hands-on capstone for the From Figma to Fluent Code curriculum.
 category: Creative Side Projects
-role: Lead Designer
-company: USPS.com
+role: Designer & Developer
+company: Design Bytes Media
 year: 2026
 order: 3
 thumbnail: /assets/images/work/portfolio-starter.png
 hero_image: /assets/images/work/portfolio-starter.png
-hero_image_alt: A starter code compainion to FIGMA to Fluent Code
+hero_image_alt: Portfolio Starter — a beginner-friendly HTML and CSS portfolio template
 project_url: https://github.com/pdkaizer/Portfolio-Starter
 tags:
-  - UX Research
-  - Interaction Design
-  - Map based design
-  - Prototyping
+  - Curriculum Design
+  - Modern CSS
+  - Design Systems
+  - Accessibility
 ---
 
 ## The problem
 
-Customers were abandoning their carts at an unusually high rate. Analytics showed the steepest drop-off happened between step 3 (shipping) and step 4 (payment) — a transition that required users to re-enter information they'd already provided.
+Learning to code from tutorials is easy. Applying that knowledge to something real is where most designers stall. The From Figma to Fluent Code curriculum teaches modern HTML and CSS across five phases — but without a concrete project to build, the concepts stay abstract.
 
-## Discovery
+The Portfolio Starter is the answer to that gap: a deliberately incomplete template that gives learners enough structure to orient themselves, and enough blank space to make it their own.
 
-I ran five moderated usability sessions and reviewed session recordings from the past 90 days. Three clear patterns emerged:
+## Approach
 
-1. Users expected shipping and billing to be combined
-2. The progress indicator created anxiety rather than clarity
-3. Error messages appeared inline but were easy to miss on mobile
+The template is intentionally zero-setup. No package manager, no build tool, no terminal required — open `index.html` in a browser and start editing. That constraint keeps the focus on the code itself rather than the toolchain around it, which is exactly right for someone working through a curriculum rather than shipping production software.
 
-## Design process
+Every feature in the template maps directly to a concept from the curriculum. The design token system uses a three-tier structure of CSS custom properties — primitives, semantic tokens, component tokens — so learners practice the same architecture they studied in Phase 3. The layout uses Flexbox and Grid in real contexts, not toy examples. Container queries demonstrate responsive design without media query hacks. Light and dark mode theming is wired up and ready to customize.
 
-Starting from the existing flow, I mapped every field and its relationship to user intent. The goal was to eliminate anything that didn't directly serve the transaction.
+## What it teaches
 
-I prototyped three directions: a stepped modal approach, a single-page accordion, and a persistent summary sidebar. After one round of unmoderated testing (n=12), the single-page accordion won clearly — users understood their place and felt in control.
+The template is annotated throughout with comments explaining semantic element choices, and TODO markers flag the sections learners are expected to replace with their own content. Working through it, they practice:
+
+- Semantic HTML and heading hierarchy
+- CSS custom properties and three-tier token architecture
+- BEM naming conventions and cascade layers
+- Flexbox and Grid in a real layout
+- Container queries for component-level responsiveness
+- Fluid typography with `clamp()`
+- Pseudo-classes and transitions
+- ARIA attributes and accessible markup patterns
 
 ## Outcome
 
-After shipping to 100% of traffic, the checkout completion rate increased by 34%. Mobile completion improved by 47%. The support queue for checkout-related issues dropped by 22% in the first month.
+The Portfolio Starter functions as both a learning tool and a deliverable — by the time a student finishes the capstone, they have a working portfolio they can actually deploy. Hosting is intentionally approachable: Netlify Drop, GitHub Pages, or Vercel all work with no configuration required.

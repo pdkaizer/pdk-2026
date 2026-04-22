@@ -2,38 +2,43 @@
 title: A Modern Web Starter
 summary: A lean, opinionated foundation using semantic HTML, modern CSS with cascade layers, and vanilla JavaScript.
 category: Creative Side Projects
-role: Lead Designer
-company: Design Byes Media
+role: Designer & Developer
+company: Personal Project
 year: 2026
 order: 1
 thumbnail: /assets/images/work/modern-we-starter.png
 hero_image: /assets/images/work/modern-we-starter.png
-hero_image_alt: A lean, opinionated foundation using semantic HTML, modern CSS
-project_url:  https://modern-web-starter.com
+hero_image_alt: A lean, opinionated foundation using semantic HTML, modern CSS with cascade layers
+project_url: https://modern-web-starter.com
 tags:
-  - AI Assisted design and development
-  - Claude Code
+  - Design Systems
   - Modern CSS
+  - Vanilla JavaScript
+  - AI-Assisted Development
 ---
 
 ## The problem
 
-Customers were abandoning their carts at an unusually high rate. Analytics showed the steepest drop-off happened between step 3 (shipping) and step 4 (payment) — a transition that required users to re-enter information they'd already provided.
+The modern web stack has a complexity problem. Most starter templates pull in multiple frameworks, dozens of dependencies, and layers of build tooling before a single line of product code is written. For small projects, side projects, and design explorations, this overhead isn't just unnecessary — it actively gets in the way.
 
-## Discovery
+CSS specificity conflicts, utility-class sprawl, and the cognitive overhead of framework churn are real friction points. I wanted a foundation that solved these problems structurally, not by piling on more abstractions.
 
-I ran five moderated usability sessions and reviewed session recordings from the past 90 days. Three clear patterns emerged:
+## Approach
 
-1. Users expected shipping and billing to be combined
-2. The progress indicator created anxiety rather than clarity
-3. Error messages appeared inline but were easy to miss on mobile
+The guiding constraint was zero dependencies. No framework, no preprocessor, no build step required to get started — just semantic HTML, modern CSS, and vanilla JavaScript with ES modules.
 
-## Design process
+The architectural bet was CSS cascade layers. Rather than fighting specificity with `!important` or relying on utility classes for overrides, cascade layers make the order of precedence explicit: `reset → tokens → base → components → utilities`. Every rule knows exactly where it sits. Adding a new component layer never breaks an existing one.
 
-Starting from the existing flow, I mapped every field and its relationship to user intent. The goal was to eliminate anything that didn't directly serve the transaction.
+The token system follows three tiers: primitives (raw values), semantic tokens (purpose-mapped aliases), and component tokens (scoped overrides). This separation means you can retheme an entire interface by changing a handful of semantic tokens without touching component code.
 
-I prototyped three directions: a stepped modal approach, a single-page accordion, and a persistent summary sidebar. After one round of unmoderated testing (n=12), the single-page accordion won clearly — users understood their place and felt in control.
+## Key decisions
+
+**Fluid type scale over breakpoint-based sizes.** All type sizes use `clamp()` to scale smoothly between viewport extremes — no font-size overrides at arbitrary breakpoints.
+
+**Light and dark mode built in.** The starter respects `prefers-color-scheme` by default and supports localStorage persistence so user preference survives page loads without a flash of wrong theme.
+
+**CLAUDE.md included.** The repo ships with a `CLAUDE.md` file that documents project conventions for AI coding assistants. This reflects how the project was built — with Claude Code as a collaborative tool throughout — and makes the same workflow available to anyone who picks up the starter.
 
 ## Outcome
 
-After shipping to 100% of traffic, the checkout completion rate increased by 34%. Mobile completion improved by 47%. The support queue for checkout-related issues dropped by 22% in the first month.
+The result is a starter that weighs almost nothing but scales further than most projects will need. Five page layout templates, base components (buttons, badges, callouts, code blocks), and a token system that's genuinely easy to extend. The headline stat: 0 dependencies, infinite customizability.
