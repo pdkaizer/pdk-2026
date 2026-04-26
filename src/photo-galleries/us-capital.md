@@ -3,7 +3,7 @@ title: My Capital Walk
 description: I have been commuting to Washington, DC one day a week to do design work for various US federal government agencies. For the past 8 years I have been working for USPS so my walk from Union Station takes me past the US Capital. I have been documenting this walk.
 cover: /assets/images/US-capital/us-capital-2019-featured.jpg
 cover_alt: Example cover photo
-location: Coastal Maine
+location: Washington, DC
 date: 2018-01-01
 order: 1
 photos:
