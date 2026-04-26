@@ -30,7 +30,6 @@ Before sketching anything, I conducted a competitive analysis of location finder
 - **Canada Post** — had a well-structured landing page with distinct location types and a bilingual service filter. The map interaction was sluggish but the information hierarchy was a clear reference point.
 - **Deutsche Post (Germany)** — used iconography to distinguish location types at a glance on the map. Dense but scannable.
 - **Australia Post** — best-in-class mobile experience. Used proximity-aware search with a collapsed filter panel that didn't obscure the map on small screens.
-- **Japan Post** — structured around service type rather than location type, which better matched how users actually think about their task.
 
 **Domestic shippers reviewed:**
 - **UPS Store Locator** — strong example of leading with "what do you need to do?" rather than "find a location." Surfaced services, hours, and estimated wait times prominently. The landing page framing set clear expectations before the search began.
