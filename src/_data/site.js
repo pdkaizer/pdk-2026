@@ -22,5 +22,6 @@ module.exports = {
     { label: "About", url: "/about/" },
     { label: "Gear", url: "/gear/" },
     { label: "Contact", url: "/contact/" },
+    { label: "Recommended Books", url: "https://books.peterkaizer.com" },
   ],
 };
