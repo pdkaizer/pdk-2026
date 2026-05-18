@@ -5,84 +5,129 @@ description: The tools, apps, and hardware I use for product design work.
 permalink: /gear/
 ---
 <div class="l-wrapper l-section gear-page">
-  <div class="l-stack">
+  <div class="gear-page__header">
     <p class="section-label">Gear</p>
     <h1>Tools and Hardware</h1>
     <p>The hardware, software, and tools I use for design and development work.</p>
   </div>
 
-  <hr class="divider" />
+  <div class="gear-categories">
 
-  <div class="prose">
+    <section class="gear-category">
+      <h2 class="gear-category__heading">Hardware</h2>
+      <div class="gear-items">
+        <div class="gear-item">
+          <p class="gear-item__label">Computer</p>
+          <p class="gear-item__name">MacBook Pro 14"</p>
+          <p class="gear-item__desc">I work on an <a href="https://www.apple.com/macbook-pro/">M1 Max MacBook Pro 14"</a> paired with a <a href="https://www.benq.com">BenQ</a> 4K 32" monitor at my desk. The combination of portability and power covers everything from heavy Figma files to development work.</p>
+        </div>
+        <div class="gear-item">
+          <p class="gear-item__label">Peripherals</p>
+          <p class="gear-item__name">Logitech MX Keys + M720</p>
+          <p class="gear-item__desc">I use a <a href="https://www.logitech.com">Logitech</a> MX Keys Advanced Wireless Illuminated Keyboard for Mac and a Logitech M720 Triathlon Multi-Device Wireless mouse.</p>
+        </div>
+        <div class="gear-item">
+          <p class="gear-item__label">Tablet</p>
+          <p class="gear-item__name">iPad Pro 13"</p>
+          <p class="gear-item__desc">I use an <a href="https://www.apple.com/ipad-pro/">M1 iPad Pro 13"</a> for reading, browsing, and general use outside of design and coding work.</p>
+        </div>
+      </div>
+    </section>
 
-    <h2>Hardware</h2>
+    <section class="gear-category">
+      <h2 class="gear-category__heading">Design Software</h2>
+      <div class="gear-items">
+        <div class="gear-item">
+          <p class="gear-item__label">Interface Design</p>
+          <p class="gear-item__name">Figma</p>
+          <p class="gear-item__desc"><a href="https://www.figma.com">Figma</a> is my primary design and prototyping tool. I use it for everything from early wireframes to high-fidelity component libraries and interactive prototypes.</p>
+        </div>
+        <div class="gear-item">
+          <p class="gear-item__label">Creative Suite</p>
+          <p class="gear-item__name">Adobe Creative Cloud</p>
+          <p class="gear-item__desc">I keep an <a href="https://www.adobe.com">Adobe Creative Cloud</a> subscription primarily for Photoshop (photo editing and compositing) and Illustrator (vector illustration and icon work).</p>
+        </div>
+      </div>
+    </section>
 
-    <h3>Computer</h3>
-    <p>I work on a <a href="https://www.apple.com/macbook-pro/"><strong>MacBook Pro 14"</strong></a> (M1 Max) paired with a <a href="https://www.benq.com">BenQ</a> 4K 32 Inch monitor at my desk. The combination of portability and power covers everything from heavy <a href="https://www.figma.com">Figma</a> files to light development work.</p>
+    <section class="gear-category">
+      <h2 class="gear-category__heading">Development Tools</h2>
+      <div class="gear-items">
+        <div class="gear-item">
+          <p class="gear-item__label">IDE / Editor</p>
+          <p class="gear-item__name">Nova + VS Code</p>
+          <p class="gear-item__desc">My favorite code editor is <a href="https://nova.app">Nova</a> from <a href="https://www.panic.com">Panic</a>, but since there is no Claude Code extension for Nova I rely on <a href="https://code.visualstudio.com">Visual Studio Code</a>. I keep the theme minimal and use a small set of extensions: Claude Code, Live Server, Figma, and Nunjucks support.</p>
+        </div>
+        <div class="gear-item">
+          <p class="gear-item__label">Terminal</p>
+          <p class="gear-item__name">Kitty + Zsh</p>
+          <p class="gear-item__desc">I use the <a href="https://sw.kovidgoyal.net/kitty/">Kitty</a> terminal with <strong>zsh</strong> and <a href="https://ohmyz.sh/">Oh My Zsh</a>. Nothing fancy — I find a clean, fast terminal more useful than a heavily configured one.</p>
+        </div>
+        <div class="gear-item">
+          <p class="gear-item__label">Version Control</p>
+          <p class="gear-item__name">Git + GitHub</p>
+          <p class="gear-item__desc">I was a diehard Git-from-the-command-line person, but lately I rely more on Claude Code within VS Code for most of my Git work. Occasionally I use the <a href="https://github.com">GitHub</a> desktop app.</p>
+        </div>
+      </div>
+    </section>
 
-    <h3>Peripherals</h3>
-    <p>I use a <strong><a href="https://www.logitech.com">Logitech</a> MX Keys Advanced Wireless Illuminated Keyboard for Mac</strong> and a <strong>Logitech M720 Triathlon Multi-Device Wireless</strong>  mousm.</p>
+    <section class="gear-category">
+      <h2 class="gear-category__heading">AI Tools</h2>
+      <div class="gear-items">
+        <div class="gear-item">
+          <p class="gear-item__label">AI Assistant</p>
+          <p class="gear-item__name">Claude</p>
+          <p class="gear-item__desc"><a href="https://claude.ai">Claude</a> from <a href="https://www.anthropic.com">Anthropic</a> is my primary AI assistant — for writing, thinking through design problems, reviewing copy, and debugging. What keeps me coming back is how well it reasons through nuanced questions and engages with design intent rather than just generating output.</p>
+        </div>
+        <div class="gear-item">
+          <p class="gear-item__label">Agentic CLI</p>
+          <p class="gear-item__name">Claude Code</p>
+          <p class="gear-item__desc">Claude Code is Anthropic's agentic CLI that runs Claude directly inside my terminal and editor. It handles writing and refactoring code, managing Git commits, scaffolding components, and navigating the codebase. Building this site is largely a collaboration between me and Claude Code.</p>
+        </div>
+      </div>
+    </section>
 
-    <h3>Tablet - I Pad</h3>
-    <p>I use an <a href="https://www.apple.com/ipad-pro/"><strong>M1 iPad Pro 13"</strong></a> for lots of non design or coding use.</p>
+    <section class="gear-category">
+      <h2 class="gear-category__heading">Productivity</h2>
+      <div class="gear-items">
+        <div class="gear-item">
+          <p class="gear-item__label">Note-taking</p>
+          <p class="gear-item__name">Obsidian + Apple Notes</p>
+          <p class="gear-item__desc"><a href="https://obsidian.md">Obsidian</a> for long-form notes, research, and design documentation. Apple Notes for quick capture and anything shared across devices.</p>
+        </div>
+        <div class="gear-item">
+          <p class="gear-item__label">Task Management</p>
+          <p class="gear-item__name">Basecamp + Reminders</p>
+          <p class="gear-item__desc">My primary project management platform is <a href="https://basecamp.com">Basecamp</a> from <a href="https://37signals.com">37signals</a> — I've used it as long as the product has existed. I'm also experimenting with Fizzy, their Kanban app. For light personal tasks, Apple Reminders.</p>
+        </div>
+        <div class="gear-item">
+          <p class="gear-item__label">Communication</p>
+          <p class="gear-item__name">Slack + Hey</p>
+          <p class="gear-item__desc"><a href="https://slack.com">Slack</a> for work, iMessage and Signal for personal. I keep notifications aggressively managed and batch async communication rather than staying always-on. For email, I'm a dedicated <a href="https://hey.com">Hey</a> user — the email system from 37signals.</p>
+        </div>
+      </div>
+    </section>
 
-    <h2>Design Software</h2>
-
-    <h3>Figma</h3>
-    <p>Figma is my primary design and prototyping tool. I use it for everything from early wireframes to high-fidelity component libraries and interactive prototypes.</p>
-
-    <h3>Adobe Creative Suite</h3>
-    <p>I keep an <a href="https://www.adobe.com">Adobe</a> Creative Cloud subscription primarily for Photoshop (photo editing and compositing) and Illustrator (vector illustration and icon work).</p>
-
-    <h2>Development Tools</h2>
-
-    <h3>IDE / Editor</h3>
-    <p>My favorite code editor is <a href="https://nova.app">Nova</a> from <a href="https://www.panic.com">Panic Software</a> but since there is not a Claude Code extension for Nova I rely on <a href="https://code.visualstudio.com">Visual Studio Code</a>. I keep the theme minimal — currently running the default dark high contrast theme — and rely on a small set of extensions: Claude Code, Live Server, Figma, and Nunjucks language support.</p>
-
-    <h3>Terminal</h3>
-    <p>I use the <a href="https://sw.kovidgoyal.net/kitty/">Kitty</a> Terminal app with <strong>zsh</strong> and <a href="https://ohmyz.sh/">Oh My Zsh</a>. Nothing fancy — I find a clean, fast terminal more useful than a heavily configured one.</p>
-
-    <h3>Version Control</h3>
-    <p>I was a diehard Git from the command line person but latly I rely more on Claude Code within Visual Studio Code to do most of my Git heavy lifting. Occasionally I use the <a href="https://github.com">GitHub</a> desktop app.</p>
-
-    <h2>AI Tools</h2>
-
-    <h3>Claude</h3>
-    <p><a href="https://claude.ai">Claude</a> from <a href="https://www.anthropic.com">Anthropic</a> is my primary AI assistant. I use it constantly — for writing, thinking through design problems, reviewing copy, and debugging. What keeps me coming back is how well it reasons through nuanced questions and its ability to engage with design intent rather than just generate output. It has meaningfully changed how I approach problem-solving day to day.</p>
-
-    <h3>Claude Code</h3>
-    <p>Claude Code is Anthropic's agentic CLI that runs Claude directly inside my terminal and editor. It handles the bulk of my development workflow: writing and refactoring code, managing Git commits, scaffolding new components, and navigating the codebase. It is not a passive autocomplete — it takes on real tasks and executes them end to end. Building this site is largely a collaboration between me and Claude Code.</p>
-
-    <h2>Productivity</h2>
-
-    <h3>Note-taking</h3>
-    <p><a href="https://obsidian.md"><strong>Obsidian</strong></a> for long-form notes, research, and design documentation. <strong>Apple Notes</strong> for quick capture and anything shared across devices.</p>
-
-    <h3>Task Management</h3>
-    <p>My primary Project Management platform is the awesome <a href="https://basecamp.com"><strong>Basecamp</strong></a> from <a href="https://37signals.com">37signals</a>. I have been using Basecamp for as long as the product has existed. I am also experimenting with Fizzy - 37 Signals amazing Kanban application</p>
-
-    <p>For light task management I rely on Apples Reminders app.</p>
-
-    <h3>Communication</h3>
-    <p><a href="https://slack.com">Slack</a> for work, iMessage and Signal for personal. I keep notifications aggressively managed and batch async communication rather than staying always-on.</p>
-
-    <p>For my personal email I am a dedicated <a href="https://hey.com">Hey</a> email system user. Hey is the increadable email and calendar system from 37 Signals.</p>
-
-    <h2>About this site</h2>
-
-    <p>This is my personal web space, where I post about technology, design and food, along with other things that catch my eye. None of the views expressed on this site or any of my personal social networks reflect the opinion of my employers or any of my freelance clients. They are my opinions alone.</p>
-
-    <h3>Publishing</h3>
-
-    <p>This site is built and published using <a href="https://www.11ty.io/">11ty</a> — a static site generator — and served by <a href="https://www.netlify.com/">Netlify</a>, secured via https thanks to a free certificate from <a href="https://letsencrypt.org/">Let's Encrypt</a>.</p>
-
-    <h3>Design &amp; Typography</h3>
-
-    <p>The site is typeset in Source Sans Pro and Playfair Display served from <a href="https://fonts.google.com">Google Fonts</a>.</p>
-
-    <h3>Code</h3>
-
-    <p>All CSS is modern CSS using cascade layers and container queries. Source code is on GitHub.</p>
+    <section class="gear-category">
+      <h2 class="gear-category__heading">This Site</h2>
+      <div class="gear-items">
+        <div class="gear-item">
+          <p class="gear-item__label">Publishing</p>
+          <p class="gear-item__name">11ty + Netlify</p>
+          <p class="gear-item__desc">Built with <a href="https://www.11ty.io/">11ty</a> — a static site generator — and served by <a href="https://www.netlify.com/">Netlify</a>, secured via HTTPS with a free certificate from <a href="https://letsencrypt.org/">Let's Encrypt</a>.</p>
+        </div>
+        <div class="gear-item">
+          <p class="gear-item__label">Typography</p>
+          <p class="gear-item__name">Source Sans 3 + Playfair Display</p>
+          <p class="gear-item__desc">Typeset in Source Sans 3 and Playfair Display, served from <a href="https://fonts.google.com">Google Fonts</a>.</p>
+        </div>
+        <div class="gear-item">
+          <p class="gear-item__label">Code</p>
+          <p class="gear-item__name">Modern CSS</p>
+          <p class="gear-item__desc">All CSS is modern CSS using cascade layers and container queries — no Tailwind, no utility frameworks. <a href="https://github.com/pdkaizer/pdk-2026">Source code is on GitHub.</a></p>
+        </div>
+      </div>
+    </section>
 
   </div>
 </div>
