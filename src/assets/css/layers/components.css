@@ -77,7 +77,7 @@
   display: flex;
   background-color: var(--color-bg);
   border-inline-start: 1px solid var(--color-border);
-  padding: var(--space-20) var(--space-6) var(--space-6);
+  padding: var(--space-32) var(--space-6) var(--space-6);
   overflow-y: auto;
   transform: translateX(100%);
   transition: transform var(--duration-base) var(--ease-out);
