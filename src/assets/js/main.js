@@ -13,34 +13,35 @@ themeToggle.addEventListener('click', () => {
   }
 });
 
-// Nav toggle (mobile hamburger)
+// Nav toggle (hamburger flyout)
 const navToggle = document.getElementById('nav-toggle');
+const navBackdrop = document.getElementById('nav-backdrop');
 const siteHeader = document.getElementById('site-header');
 
 function openMenu() {
   siteHeader.setAttribute('data-menu-open', '');
   navToggle.setAttribute('aria-expanded', 'true');
   navToggle.setAttribute('aria-label', 'Close navigation');
+  document.documentElement.style.overflow = 'hidden';
 }
 
 function closeMenu() {
   siteHeader.removeAttribute('data-menu-open');
   navToggle.setAttribute('aria-expanded', 'false');
   navToggle.setAttribute('aria-label', 'Open navigation');
+  document.documentElement.style.overflow = '';
 }
 
 navToggle.addEventListener('click', () => {
   siteHeader.hasAttribute('data-menu-open') ? closeMenu() : openMenu();
 });
 
+// Close on backdrop click
+navBackdrop.addEventListener('click', closeMenu);
+
 // Close on Escape
 document.addEventListener('keydown', (e) => {
   if (e.key === 'Escape' && siteHeader.hasAttribute('data-menu-open')) closeMenu();
-});
-
-// Close on click outside
-document.addEventListener('click', (e) => {
-  if (siteHeader.hasAttribute('data-menu-open') && !siteHeader.contains(e.target)) closeMenu();
 });
 
 // Close when a nav link is clicked (handles same-page anchors)
