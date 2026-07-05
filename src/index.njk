@@ -100,7 +100,7 @@ ogImage: /assets/images/work/modern-we-starter.png
   </div>
 
   <div class="l-grid">
-    {% for gallery in collections.photoGalleries | limit(1) %}
+    {% for gallery in collections.photoGalleries | limit(2) %}
       <a class="gallery-card" href="{{ gallery.url }}">
         <div class="gallery-card__image">
           {% if gallery.data.cover %}
