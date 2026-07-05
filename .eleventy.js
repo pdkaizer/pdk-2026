@@ -25,7 +25,7 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addCollection("thoughts", (collectionApi) =>
     collectionApi
       .getFilteredByGlob("src/thoughts/*.md")
-      .sort((a, b) => (a.data.order ?? 99) - (b.data.order ?? 99))
+      .sort((a, b) => b.date - a.date)
   );
 
   // Filters

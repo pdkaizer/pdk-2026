@@ -50,6 +50,32 @@ ogImage: /assets/images/work/modern-we-starter.png
 </section>
 {% endif %}
 
+{% if collections.thoughts | length %}
+<section class="l-wrapper l-section">
+  <div class="section-header">
+    <p class="section-label">Recent Design Thoughts</p>
+    <a href="/thoughts/" class="btn btn--secondary">All thoughts</a>
+  </div>
+
+  <div class="thoughts-grid">
+    {% for thought in collections.thoughts | limit(3) %}
+      <a class="thought-card" href="{{ thought.url }}" data-category="{{ thought.data.category | lower }}">
+        <span class="thought-card__category">{{ thought.data.category }}</span>
+        <h2 class="thought-card__title">{{ thought.data.title }}</h2>
+        <p class="thought-card__description">{{ thought.data.description }}</p>
+        {% if thought.data.tags and thought.data.tags | length %}
+          <div class="thought-card__tags">
+            {% for tag in thought.data.tags %}
+              <span class="tag">{{ tag }}</span>
+            {% endfor %}
+          </div>
+        {% endif %}
+      </a>
+    {% endfor %}
+  </div>
+</section>
+{% endif %}
+
 {% if collections.caseStudies | length %}
 <section class="l-wrapper l-section">
   <div class="section-header">
