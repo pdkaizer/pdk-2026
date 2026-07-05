@@ -345,6 +345,33 @@
   line-height: 1.55;
 }
 
+/* Featured variant — full content width, horizontal at wider viewports */
+.post-card--featured {
+  @media (width >= 48rem) {
+    grid-template-columns: 3fr 2fr;
+    grid-template-rows: auto;
+  }
+
+  & .post-card__image {
+    @media (width >= 48rem) {
+      aspect-ratio: auto;
+    }
+  }
+
+  & .post-card__body {
+    padding: var(--space-8);
+    justify-content: center;
+  }
+
+  & .post-card__title {
+    font-size: var(--text-2xl);
+  }
+
+  & .post-card__summary {
+    font-size: var(--text-base);
+  }
+}
+
 
 /* ─── Gallery Card ───────────────────────────────────────── */
 

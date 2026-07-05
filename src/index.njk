@@ -17,6 +17,39 @@ ogImage: /assets/images/work/modern-we-starter.png
   </section>
 </div>
 
+{% if designBytes | length %}
+<section class="l-wrapper l-section">
+  <div class="section-header">
+    <p class="section-label">Featured article</p>
+    <a href="https://design-bytes.com" class="btn btn--secondary" target="_blank" rel="noopener">
+      Visit Design Bytes
+    </a>
+  </div>
+
+  {% set post = designBytes[0] %}
+  <a class="post-card post-card--featured" href="{{ post.url }}" target="_blank" rel="noopener">
+    {% if post.image %}
+      <div class="post-card__image">
+        <img src="{{ post.image }}" alt="{{ post.title }}" loading="lazy" />
+      </div>
+    {% else %}
+      <div class="post-card__image post-card__image--placeholder"></div>
+    {% endif %}
+    <div class="post-card__body">
+      {% if post.date %}
+        <time class="post-card__date" datetime="{{ post.date | htmlDateString }}">
+          {{ post.date | readableDate }}
+        </time>
+      {% endif %}
+      <h2 class="post-card__title">{{ post.title }}</h2>
+      {% if post.summary %}
+        <p class="post-card__summary">{{ post.summary }}</p>
+      {% endif %}
+    </div>
+  </a>
+</section>
+{% endif %}
+
 {% if collections.caseStudies | length %}
 <section class="l-wrapper l-section">
   <div class="section-header">
