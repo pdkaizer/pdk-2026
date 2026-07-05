@@ -84,8 +84,8 @@ and the per-category accent colors below.
 
 ### Category accent colors
 
-Used for Design Seed cards/heroes to visually distinguish categories. Set via inline
-`--seed-accent` on `[data-category]`, independent of light/dark theme:
+Used for Thought cards/heroes to visually distinguish categories. Set via inline
+`--thought-accent` on `[data-category]`, independent of light/dark theme:
 
 | Category | Color |
 |---|---|
@@ -213,8 +213,8 @@ Reusable, page-agnostic UI pieces. Naming follows BEM-ish `block__element--modif
 - **Section label / header** (`.section-label`, `.section-header`) — uppercase eyebrow
   + flex header row pattern reused across index pages.
 - **Tag/pill** (`.tag`) — small muted uppercase pill.
-- **Design Seed card** (`.seed-card`) — bordered card with a colored top border keyed to
-  `[data-category]` via the `--seed-accent` custom property pattern (see Category accent
+- **Thought card** (`.thought-card`) — bordered card with a colored top border keyed to
+  `[data-category]` via the `--thought-accent` custom property pattern (see Category accent
   colors above).
 - **Divider** (`.divider`) — plain `hr`-style rule with large block margin.
 
@@ -227,7 +227,7 @@ Overrides and one-off layouts scoped to a single page/template, layered above
 - Case study detail (`.case-study-hero`, `.case-study-meta`, `.case-study-image`) —
   two-column hero (text + portrait image) above `48rem`, metadata as a bordered
   `<dl>` grid.
-- Design Seeds listing/detail (`.seeds-page-title`, `.seed-hero`, `.seed-meta`) —
+- Thoughts listing/detail (`.thoughts-page-title`, `.thought-hero`, `.thought-meta`) —
   mirrors the case study detail pattern.
 - About page (`.about-hero`, `.about-intro`, `.about-timeline`, `.about-skills`,
   `.about-footer-cta`) — a stack of full-bleed sections each separated by
@@ -259,4 +259,4 @@ Overrides and one-off layouts scoped to a single page/template, layered above
   `--color-accent`, offset 3px).
 - **Prose is a scoped concern.** `.prose` only styles children (`h2`, `h3`, lists,
   blockquote, inline `code`) — it doesn't restyle the page around it, so it composes
-  safely inside case studies, seeds, and any future long-form content.
+  safely inside case studies, thoughts, and any future long-form content.

@@ -639,22 +639,22 @@
 }
 
 
-/* ─── Design Seed Card ────────────────────────────────────── */
+/* ─── Thought Card ────────────────────────────────────────── */
 
-.seeds-grid {
+.thoughts-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
   gap: var(--space-5);
   padding-block-end: var(--space-20);
 }
 
-.seed-card {
+.thought-card {
   display: flex;
   flex-direction: column;
   gap: var(--space-3);
   padding: var(--space-6);
   border: 1px solid var(--color-border);
-  border-block-start: 3px solid var(--seed-accent, var(--color-accent));
+  border-block-start: 3px solid var(--thought-accent, var(--color-accent));
   border-radius: 2px;
   text-decoration: none;
   color: inherit;
@@ -663,39 +663,39 @@
   &:hover {
     background-color: var(--color-bg-subtle);
     border-color: var(--color-text-muted);
-    border-block-start-color: var(--seed-accent, var(--color-accent));
+    border-block-start-color: var(--thought-accent, var(--color-accent));
   }
 }
 
-.seed-card[data-category="layout"]      { --seed-accent: #7c8f4e; }
-.seed-card[data-category="typography"]  { --seed-accent: #4a7ba0; }
-.seed-card[data-category="color"]       { --seed-accent: #b06b3a; }
-.seed-card[data-category="motion"]      { --seed-accent: #7a5e8a; }
-.seed-card[data-category="interaction"] { --seed-accent: #3d8a7a; }
-.seed-card[data-category="philosophy"]  { --seed-accent: #8a6b3d; }
+.thought-card[data-category="layout"]      { --thought-accent: #7c8f4e; }
+.thought-card[data-category="typography"]  { --thought-accent: #4a7ba0; }
+.thought-card[data-category="color"]       { --thought-accent: #b06b3a; }
+.thought-card[data-category="motion"]      { --thought-accent: #7a5e8a; }
+.thought-card[data-category="interaction"] { --thought-accent: #3d8a7a; }
+.thought-card[data-category="philosophy"]  { --thought-accent: #8a6b3d; }
 
-.seed-card__category {
+.thought-card__category {
   font-size: var(--text-xs);
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: var(--seed-accent, var(--color-text-muted));
+  color: var(--thought-accent, var(--color-text-muted));
 }
 
-.seed-card__title {
+.thought-card__title {
   font-family: var(--font-serif);
   font-size: var(--text-lg);
   font-weight: normal;
   line-height: 1.25;
 }
 
-.seed-card__description {
+.thought-card__description {
   font-size: var(--text-sm);
   color: var(--color-text-muted);
   line-height: 1.55;
   flex: 1;
 }
 
-.seed-card__tags {
+.thought-card__tags {
   display: flex;
   flex-wrap: wrap;
   gap: var(--space-2);

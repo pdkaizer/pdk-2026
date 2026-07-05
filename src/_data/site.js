@@ -17,7 +17,7 @@ module.exports = {
   nav: [
     { label: "Work", url: "/work/" },
     { label: "Photos", url: "/photos/" },
-    { label: "Seeds", url: "/seeds/" },
+    { label: "Thoughts", url: "/thoughts/" },
     { label: "Writing", url: "/writing/" },
     { label: "About", url: "/about/" },
     { label: "Gear", url: "/gear/" },

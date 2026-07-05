@@ -1,4 +1,0 @@
-{
-  "layout": "layouts/design-seed.njk",
-  "permalink": "/seeds/{{ page.fileSlug }}/"
-}

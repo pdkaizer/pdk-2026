@@ -3,30 +3,30 @@ layout: layouts/base.njk
 ---
 <article>
   <div class="l-wrapper">
-    <a href="/seeds/" class="seed-back">&#8592; Design Seeds</a>
-    <header class="seed-hero">
-      <div class="seed-hero__text">
+    <a href="/thoughts/" class="thought-back">&#8592; Thoughts</a>
+    <header class="thought-hero">
+      <div class="thought-hero__text">
         {% if category %}
-          <p class="seed-hero__category" data-category="{{ category | lower }}">{{ category }}</p>
+          <p class="thought-hero__category" data-category="{{ category | lower }}">{{ category }}</p>
         {% endif %}
-        <h1 class="seed-hero__title">{{ title }}</h1>
+        <h1 class="thought-hero__title">{{ title }}</h1>
         {% if description %}
-          <p class="seed-hero__description">{{ description }}</p>
+          <p class="thought-hero__description">{{ description }}</p>
         {% endif %}
       </div>
     </header>
   </div>
 
   <div class="l-wrapper">
-    <dl class="seed-meta">
+    <dl class="thought-meta">
       {% if date %}
-        <div class="seed-meta__item">
+        <div class="thought-meta__item">
           <dt>Published</dt>
           <dd>{{ date | readableDate }}</dd>
         </div>
       {% endif %}
       {% if tags and tags | length %}
-        <div class="seed-meta__item">
+        <div class="thought-meta__item">
           <dt>Topics</dt>
           <dd>{{ tags | join(", ") }}</dd>
         </div>

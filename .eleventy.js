@@ -22,9 +22,9 @@ module.exports = function (eleventyConfig) {
       .sort((a, b) => b.date - a.date)
   );
 
-  eleventyConfig.addCollection("designSeeds", (collectionApi) =>
+  eleventyConfig.addCollection("thoughts", (collectionApi) =>
     collectionApi
-      .getFilteredByGlob("src/design-seeds/*.md")
+      .getFilteredByGlob("src/thoughts/*.md")
       .sort((a, b) => (a.data.order ?? 99) - (b.data.order ?? 99))
   );
 
@@ -51,8 +51,8 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addCollection("feedItems", (collectionApi) => {
     const writing = collectionApi.getFilteredByGlob("src/writing/*.md");
-    const seeds = collectionApi.getFilteredByGlob("src/design-seeds/*.md");
-    return [...writing, ...seeds].sort((a, b) => b.date - a.date);
+    const thoughts = collectionApi.getFilteredByGlob("src/thoughts/*.md");
+    return [...writing, ...thoughts].sort((a, b) => b.date - a.date);
   });
 
   return {
