@@ -3,7 +3,7 @@ module.exports = {
   author: "Peter Kaizer",
   tagline: "Product Designer",
   description: "Product design portfolio — case studies in UX, interaction design, and design systems.",
-  defaultOgImage: "/assets/images/og-default.png",
+  defaultOgImage: "/assets/images/pdk-about-photo.jpg",
   location: "Baltimore",
   email: "peter@peterkaizer.com",
   social: [

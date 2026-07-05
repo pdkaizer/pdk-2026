@@ -10,7 +10,7 @@
     <!-- Open Graph -->
     {% set ogTitle %}{% if title %}{{ title }} — {{ site.author }}{% else %}{{ site.author }} — {{ site.tagline }}{% endif %}{% endset %}
     {% set ogDesc %}{{ description or site.description }}{% endset %}
-    {% set ogImg %}{{ ogImage or thumbnail or site.defaultOgImage }}{% endset %}
+    {% set ogImg %}{{ ogImage or thumbnail or cover or site.defaultOgImage }}{% endset %}
     <meta property="og:type" content="website" />
     <meta property="og:site_name" content="{{ site.author }}" />
     <meta property="og:title" content="{{ ogTitle }}" />
