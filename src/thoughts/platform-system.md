@@ -8,6 +8,7 @@ tags:
   - publishing
   - systems
 order: 13
+ogImage: /assets/images/thoughts/platform-system.png
 ---
 
 A well-crafted design system is only half the argument. The other half is where it lives.
