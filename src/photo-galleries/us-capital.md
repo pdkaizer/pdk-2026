@@ -4,6 +4,8 @@ description: I have been commuting to Washington, DC one day a week to do design
 cover: /assets/images/US-capital/us-capital-2019-featured.jpg
 cover_alt: Example cover photo
 location: Washington, DC
+lat: 38.8899
+lng: -77.0091
 date: 2018-01-01
 order: 1
 photos:

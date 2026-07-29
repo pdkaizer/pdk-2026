@@ -4,6 +4,7 @@ module.exports = {
   tagline: "Product Designer",
   description: "Product design portfolio — case studies in UX, interaction design, and design systems.",
   defaultOgImage: "/assets/images/pdk-about-photo.jpg",
+  mapboxToken: process.env.MAPBOX_TOKEN || "",
   location: "Baltimore",
   email: "peter@peterkaizer.com",
   social: [

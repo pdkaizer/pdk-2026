@@ -4,6 +4,8 @@ description: My wife and I have been going to Maine for the past 10 summers. The
 cover: /assets/images/maine/maine-2019.jpg
 cover_alt: Example cover photo
 location: Coastal Maine
+lat: 44.2098
+lng: -69.0645
 date: 2019-08-23
 order: 1
 photos:

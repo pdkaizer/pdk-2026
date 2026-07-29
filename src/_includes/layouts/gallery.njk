@@ -1,21 +1,34 @@
 ---
 layout: layouts/base.njk
 ---
-<div class="l-wrapper">
-  <header class="gallery-hero">
-    <a href="/photos/" class="gallery-back">← All galleries</a>
-    <h1 class="gallery-hero__title">{{ title }}</h1>
-    {% if description %}
-      <p class="gallery-hero__description">{{ description }}</p>
-    {% endif %}
-    <div class="gallery-hero__meta">
-      {% if location %}
-        <span>{{ location }}</span>
+<div class="l-wrapper gallery-hero-wrap">
+  <header class="gallery-hero{% if lat and lng %} gallery-hero--with-map{% endif %}">
+    <div class="gallery-hero__text">
+      <a href="/photos/" class="gallery-back">← All galleries</a>
+      <h1 class="gallery-hero__title">{{ title }}</h1>
+      {% if description %}
+        <p class="gallery-hero__description">{{ description }}</p>
       {% endif %}
-      {% if date %}
-        <time datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>
-      {% endif %}
+      <div class="gallery-hero__meta">
+        {% if location %}
+          <span>{{ location }}</span>
+        {% endif %}
+        {% if date %}
+          <time datetime="{{ date | htmlDateString }}">{{ date | readableDate }}</time>
+        {% endif %}
+      </div>
     </div>
+    {% if lat and lng and site.mapboxToken %}
+      <div
+        class="gallery-hero__map"
+        id="gallery-map"
+        data-lat="{{ lat }}"
+        data-lng="{{ lng }}"
+        data-token="{{ site.mapboxToken }}"
+        role="img"
+        aria-label="Map showing {{ location or title }}"
+      ></div>
+    {% endif %}
   </header>
 </div>
 

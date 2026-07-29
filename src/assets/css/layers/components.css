@@ -444,10 +444,41 @@
 
 /* ─── Gallery detail ─────────────────────────────────────── */
 
+.gallery-hero-wrap {
+  container-type: inline-size;
+  container-name: gallery-hero;
+}
+
 .gallery-hero {
   padding-block: var(--space-12) var(--space-10);
+}
+
+.gallery-hero__text {
   display: grid;
   gap: var(--space-4);
+}
+
+.gallery-hero__map {
+  margin-block-start: var(--space-8);
+  width: 400px;
+  max-width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: var(--color-bg-subtle);
+}
+
+@container gallery-hero (width >= 48rem) {
+  .gallery-hero--with-map {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: var(--space-10);
+  }
+
+  .gallery-hero__map {
+    margin-block-start: 0;
+  }
 }
 
 .gallery-back {

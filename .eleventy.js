@@ -1,3 +1,9 @@
+try {
+  process.loadEnvFile();
+} catch {
+  // .env is optional — env vars may already be set (e.g. Netlify build env)
+}
+
 module.exports = function (eleventyConfig) {
   // Passthrough copies
   eleventyConfig.addPassthroughCopy("src/assets/js");

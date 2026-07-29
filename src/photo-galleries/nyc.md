@@ -4,6 +4,8 @@ description: We usually visit New York City several times a year. These are from
 cover: /assets/images/NYC/2015-05-03-NYC-123.jpg
 cover_alt: Example cover photo
 location: NYC
+lat: 40.6694
+lng: -73.9629
 date: 2016-05-20
 order: 1
 photos:

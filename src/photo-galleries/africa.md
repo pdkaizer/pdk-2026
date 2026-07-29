@@ -4,6 +4,8 @@ description: In 2005 I had the honor to visit Africa to see some of the humanita
 cover: /assets/images/malawi-safari/malawi-boat-safari-1.jpg
 cover_alt: Example cover photo
 location: Malawi, Africa
+lat: -13.9626
+lng: 33.7741
 date: 2005-05-01
 order: 4
 photos:
