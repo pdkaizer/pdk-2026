@@ -4,6 +4,7 @@ const EleventyFetch = require("@11ty/eleventy-fetch");
 const rawLinks = [
   { title: "Use AI to Need Less AI", url: "https://southleft.substack.com/p/use-ai-to-need-less-ai", note: "A fasinating look a one way to emrace AI.", date: "2026-07-29" },
   { title: "The Unreasonable Effectiveness of HTML for Agent Output", url: "https://ylanglabs.com/blogs/the-unreasonable-effectiveness-of-html-for-agent-output", note: "An interesting piece that asks: The useful question is: when should the output be source, and when should it be a surface?", date: "2026-06-29" },
+  { title: "Substack writers, you need a website!", url: "https://elizabethtai.com/2026/06/10/substack-writers-you-need-a-website/", note: "This toally resonats with me, and I would add if you are using Substack consider moving to Ghost.", date: "2026-07-30" },
 ];
 
 async function getOgImage(url) {
