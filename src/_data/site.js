@@ -20,6 +20,7 @@ module.exports = {
     { label: "Photos", url: "/photos/" },
     { label: "Thoughts", url: "/thoughts/" },
     { label: "Writing", url: "/writing/" },
+    { label: "Links", url: "/links/" },
     { label: "About", url: "/about/" },
     { label: "Gear", url: "/gear/" },
     { label: "Contact", url: "/contact/" },

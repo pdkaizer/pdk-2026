@@ -1,0 +1,37 @@
+---
+layout: layouts/base.njk
+title: Links
+description: Links I've found interesting, with a short note on why.
+permalink: /links/
+---
+<div class="l-wrapper l-section">
+  <div class="l-stack">
+    <p class="section-label">Links</p>
+    <h1 class="section-title--sm">Links</h1>
+    <p class="section-description">Things I've come across and found worth a second look — with a note on why.</p>
+  </div>
+
+  <hr class="divider" />
+
+  {% if links | length %}
+    <div class="links-list">
+      {% for link in links %}
+        <a class="links-list__item" href="{{ link.url }}" target="_blank" rel="noopener noreferrer">
+          {% if link.image %}
+            <img class="links-list__image" src="{{ link.image }}" alt="" loading="lazy" decoding="async" />
+          {% else %}
+            <div class="links-list__image links-list__image--placeholder"></div>
+          {% endif %}
+          <div class="links-list__body">
+            <span class="links-list__title">{{ link.title }}</span>
+            {% if link.note %}
+              <p class="links-list__note">{{ link.note }}</p>
+            {% endif %}
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p class="l-prose">No links yet.</p>
+  {% endif %}
+</div>

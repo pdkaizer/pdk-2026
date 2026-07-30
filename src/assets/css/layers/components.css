@@ -373,6 +373,65 @@
 }
 
 
+/* ─── Links List ──────────────────────────────────────────── */
+
+.links-list {
+  display: grid;
+  gap: var(--space-6);
+}
+
+.links-list__item {
+  display: flex;
+  gap: var(--space-4);
+  align-items: flex-start;
+  text-decoration: none;
+  color: inherit;
+  padding-block: var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+
+  &:last-child {
+    border-bottom: none;
+  }
+
+  &:hover .links-list__title {
+    color: var(--color-accent);
+  }
+}
+
+.links-list__image {
+  flex-shrink: 0;
+  width: 140px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 4px;
+  background-color: var(--color-bg-subtle);
+
+  &.links-list__image--placeholder {
+    background: linear-gradient(135deg, var(--color-bg-subtle) 0%, var(--color-accent-light) 100%);
+  }
+}
+
+.links-list__body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.links-list__title {
+  font-family: var(--font-serif);
+  font-size: var(--text-lg);
+  font-weight: normal;
+  line-height: 1.2;
+  transition: color var(--duration-fast) ease;
+}
+
+.links-list__note {
+  font-size: var(--text-sm);
+  color: var(--color-text-muted);
+  line-height: 1.55;
+}
+
+
 /* ─── Gallery Card ───────────────────────────────────────── */
 
 .gallery-card {
@@ -646,6 +705,17 @@
   text-transform: uppercase;
   color: var(--color-text-muted);
   margin-block-end: var(--space-8);
+}
+
+.section-title--sm {
+  font-size: var(--text-2xl);
+}
+
+.section-description {
+  font-size: var(--text-lg);
+  color: var(--color-text-muted);
+  max-width: 60ch;
+  margin-block-start: var(--space-4);
 }
 
 .section-header {
