@@ -21,6 +21,7 @@ module.exports = {
     { label: "Thoughts", url: "/thoughts/" },
     { label: "Writing", url: "/writing/" },
     { label: "Links", url: "/links/" },
+    { label: "Listening", url: "/listening/" },
     { label: "About", url: "/about/" },
     { label: "Gear", url: "/gear/" },
     { label: "Contact", url: "/contact/" },

@@ -1,0 +1,39 @@
+---
+layout: layouts/base.njk
+title: Listening
+description: Podcasts I'm currently listening to.
+permalink: /listening/
+---
+<div class="l-wrapper l-section">
+  <div class="l-stack">
+    <p class="section-label">Listening</p>
+    <h1 class="section-title--sm">Podcasts</h1>
+    <p class="section-description">A running list of shows in my podcast rotation.</p>
+  </div>
+
+  <hr class="divider" />
+
+  {% if podcasts | length %}
+    <div class="l-grid">
+      {% for podcast in podcasts %}
+        <a class="podcast-card" href="{{ podcast.url }}" target="_blank" rel="noopener noreferrer">
+          <div class="podcast-card__image">
+            {% if podcast.image %}
+              <img src="{{ podcast.image }}" alt="{{ podcast.title }}" loading="lazy" decoding="async" />
+            {% endif %}
+          </div>
+          <div class="podcast-card__meta">
+            {% if podcast.title %}
+              <h2 class="podcast-card__title">{{ podcast.title }}</h2>
+            {% endif %}
+            {% if podcast.description %}
+              <p class="podcast-card__description">{{ podcast.description }}</p>
+            {% endif %}
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p>No podcasts yet.</p>
+  {% endif %}
+</div>
