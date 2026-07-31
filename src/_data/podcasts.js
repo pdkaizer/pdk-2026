@@ -7,6 +7,7 @@ const rawPodcasts = [
   { url: "https://podcasts.apple.com/us/podcast/pivot/id1073226719" },
   { url: "https://podcasts.apple.com/us/podcast/hard-fork/id1528594034" },
   { url: "https://podcasts.apple.com/us/podcast/decoder-with-nilay-patel/id1011668648" },
+  { url: "https://podcasts.apple.com/us/podcast/rework/id1264193508" },
 ];
 
 function getMetaTag(html, property) {
