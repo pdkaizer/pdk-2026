@@ -4,6 +4,7 @@ const EleventyFetch = require("@11ty/eleventy-fetch");
 // Title, artwork, and description are pulled from the page at build time.
 const rawPodcasts = [
   { url: "https://podcasts.apple.com/us/podcast/accidental-tech-podcast/id617416468" },
+  { url: "https://podcasts.apple.com/us/podcast/design-darlings/id6791396337" },
   { url: "https://podcasts.apple.com/us/podcast/pivot/id1073226719" },
   { url: "https://podcasts.apple.com/us/podcast/hard-fork/id1528594034" },
   { url: "https://podcasts.apple.com/us/podcast/decoder-with-nilay-patel/id1011668648" },
