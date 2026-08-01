@@ -67,25 +67,29 @@
 .site-header[data-menu-open] .nav-toggle__open  { display: none; }
 .site-header[data-menu-open] .nav-toggle__close { display: block; }
 
-/* Nav flyout — fixed panel, slides in from the right over a backdrop scrim */
+/* Nav flyout — full-screen overlay, fades and slides up into view */
 .nav-flyout {
   position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  width: min(20rem, 85vw);
+  inset: 0;
   display: flex;
+  align-items: safe center;
+  justify-content: center;
   background-color: var(--color-bg);
-  border-inline-start: 1px solid var(--color-border);
   padding: var(--space-32) var(--space-6) var(--space-6);
   overflow-y: auto;
-  transform: translateX(100%);
-  transition: transform var(--duration-base) var(--ease-out);
+  opacity: 0;
+  transform: translateY(1rem);
+  transition: opacity var(--duration-base) var(--ease-out),
+    transform var(--duration-base) var(--ease-out),
+    visibility var(--duration-base);
+  visibility: hidden;
   z-index: 20;
 }
 
 .site-header[data-menu-open] ~ .nav-flyout {
-  transform: translateX(0);
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
 }
 
 .nav-backdrop {
@@ -109,7 +113,9 @@
   gap: 0;
   list-style: none;
   width: 100%;
+  max-width: 24rem;
   height: fit-content;
+  margin-inline: auto;
 
   & li {
     border-block-end: 1px solid var(--color-border);
@@ -118,7 +124,7 @@
   & a {
     display: block;
     padding-block: var(--space-4);
-    font-size: var(--text-base);
+    font-size: var(--text-2xl);
     text-decoration: none;
     color: var(--color-text-muted);
     letter-spacing: 0.02em;
