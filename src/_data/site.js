@@ -19,7 +19,7 @@ module.exports = {
     { label: "Work", url: "/work/" },
     { label: "Photos", url: "/photos/" },
     { label: "Thoughts", url: "/thoughts/" },
-    { label: "Writing", url: "/writing/" },
+    { label: "Articles", url: "/articles/" },
     { label: "Links", url: "/links/" },
     { label: "Listening", url: "/listening/" },
     { label: "About", url: "/about/" },
