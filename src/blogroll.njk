@@ -1,0 +1,32 @@
+---
+layout: layouts/base.njk
+title: Blogroll
+description: Blogs I read regularly.
+permalink: /blogroll/
+---
+<div class="l-wrapper l-section">
+  <div class="l-stack">
+    <p class="section-label">Blogroll</p>
+    <h1 class="section-title--sm">Blogroll</h1>
+    <p class="section-description">Blogs I read regularly and would recommend.</p>
+  </div>
+
+  <hr class="divider" />
+
+  {% if blogroll | length %}
+    <div class="links-list">
+      {% for blog in blogroll %}
+        <a class="links-list__item" href="{{ blog.url }}" target="_blank" rel="noopener noreferrer">
+          <div class="links-list__body">
+            <span class="links-list__title">{{ blog.name }}</span>
+            {% if blog.note %}
+              <p class="links-list__note">{{ blog.note }}</p>
+            {% endif %}
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p class="l-prose">No blogs yet.</p>
+  {% endif %}
+</div>

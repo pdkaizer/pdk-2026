@@ -21,6 +21,7 @@ module.exports = {
     { label: "Thoughts", url: "/thoughts/" },
     { label: "Articles", url: "/articles/" },
     { label: "Links", url: "/links/" },
+    { label: "Blogroll", url: "/blogroll/" },
     { label: "Listening", url: "/listening/" },
     { label: "About", url: "/about/" },
     { label: "Gear", url: "/gear/" },
