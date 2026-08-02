@@ -7,6 +7,10 @@ const blogroll = [
   { name: "Weightshifting", url: "https://nazhamid.com", note: "Naz Hamid's occasional notes on design, culture, and travel." },
   { name: "Paul Stamatiou", url: "https://paulstamatiou.com", note: "Paul Stamatiou's corner of the internet. Lots of interesting stuff." },
   { name: "Elliott Richmond", url: "https://elliottrichmond.co.uk", note: "Elliott Richmond on WordPress and WooCommerce development." },
+  { name: "Zell Liew", url: "https://zellwk.com/", note: "Zell Liew on web development, product building, and personal growth." },
+  { name: "Brilliantcrank", url: "https://brilliantcrank.com/", note: "Essays and zines on creative thinking, technology, and culture." },
+  { name: "Maggie Appleton's Digital Garden", url: "https://maggieappleton.com/", note: "Maggie Appleton's visual essays on programming, design, and anthropology." },
+  { name: "Josh W Comeau", url: "https://www.joshwcomeau.com/", note: "Josh W Comeau's tutorials and interactive guides on CSS, animation, and React." },
 ];
 
 module.exports = blogroll;
