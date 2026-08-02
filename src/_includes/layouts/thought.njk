@@ -17,6 +17,7 @@ layout: layouts/base.njk
     </header>
   </div>
 
+  {% set shareUrl = page.url | absoluteUrl(site.url) %}
   <div class="l-wrapper">
     <dl class="thought-meta">
       {% if date %}
@@ -37,6 +38,15 @@ layout: layouts/base.njk
   <div class="l-wrapper">
     <div class="prose">
       {{ content | safe }}
+    </div>
+
+    <div class="thought-share">
+      <a class="btn btn--secondary" href="https://bsky.app/intent/compose?text={{ (title ~ " " ~ shareUrl) | urlencode }}" target="_blank" rel="noopener noreferrer" aria-label="Share on Bluesky">
+        Share to: <i class="fa-brands fa-bluesky" aria-hidden="true"></i>
+      </a>
+      <button type="button" class="btn btn--secondary" data-mastodon-share data-share-text="{{ title }}" data-share-url="{{ shareUrl }}" aria-label="Share on Mastodon">
+        Share to: <i class="fa-brands fa-mastodon" aria-hidden="true"></i>
+      </button>
     </div>
   </div>
 </article>

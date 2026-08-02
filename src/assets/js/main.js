@@ -48,3 +48,18 @@ document.addEventListener('keydown', (e) => {
 document.querySelectorAll('#primary-nav a').forEach((link) => {
   link.addEventListener('click', closeMenu);
 });
+
+// Mastodon share (federated — ask for the reader's instance once, then remember it)
+document.querySelectorAll('[data-mastodon-share]').forEach((button) => {
+  button.addEventListener('click', () => {
+    let instance = localStorage.getItem('mastodonInstance');
+    if (!instance) {
+      const input = prompt('Enter your Mastodon instance domain (e.g. mastodon.social):');
+      if (!input) return;
+      instance = input.trim().replace(/^https?:\/\//, '').replace(/\/$/, '');
+      localStorage.setItem('mastodonInstance', instance);
+    }
+    const text = `${button.dataset.shareText} ${button.dataset.shareUrl}`;
+    window.open(`https://${instance}/share?text=${encodeURIComponent(text)}`, '_blank', 'noopener,noreferrer');
+  });
+});
