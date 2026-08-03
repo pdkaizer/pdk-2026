@@ -6,13 +6,15 @@
     "start": "npm-run-all --parallel dev:*",
     "dev:11ty": "eleventy --serve",
     "dev:css": "postcss src/assets/css/main.css -o _site/assets/css/main.css --watch",
-    "build": "npm-run-all build:css build:11ty",
+    "build": "npm-run-all build:css build:11ty build:search",
     "build:css": "postcss src/assets/css/main.css -o _site/assets/css/main.css",
-    "build:11ty": "eleventy"
+    "build:11ty": "eleventy",
+    "build:search": "pagefind --site _site"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
     "npm-run-all2": "^6.0.0",
+    "pagefind": "^1.5.2",
     "postcss": "^8.0.0",
     "postcss-cli": "^11.0.0",
     "postcss-import": "^16.0.0",
