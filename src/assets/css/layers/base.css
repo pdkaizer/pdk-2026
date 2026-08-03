@@ -10,6 +10,14 @@
   --color-accent-light: #e8ddd5;
   --color-border: #e2ddd8;
 
+  /* Thought category accents — tuned per-theme for WCAG AA text contrast (4.5:1) */
+  --category-layout: #687841;
+  --category-typography: #477699;
+  --category-color: #a16235;
+  --category-motion: #7a5e8a;
+  --category-interaction: #377c6d;
+  --category-philosophy: #8a6b3d;
+
   /* Typography */
   --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
   --font-sans: "Source Sans 3", system-ui, -apple-system, "Segoe UI", sans-serif;
@@ -59,6 +67,13 @@
   --color-accent: #c8956a;
   --color-accent-light: #2a2118;
   --color-border: #2e2c29;
+
+  --category-layout: #7c8f4e;
+  --category-typography: #5084ac;
+  --category-color: #b66e3c;
+  --category-motion: #9175a1;
+  --category-interaction: #3e8c7c;
+  --category-philosophy: #9d7a46;
 }
 
 /* Global base styles */

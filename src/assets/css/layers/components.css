@@ -834,12 +834,12 @@
   }
 }
 
-.thought-card[data-category="layout"]      { --thought-accent: #7c8f4e; }
-.thought-card[data-category="typography"]  { --thought-accent: #4a7ba0; }
-.thought-card[data-category="color"]       { --thought-accent: #b06b3a; }
-.thought-card[data-category="motion"]      { --thought-accent: #7a5e8a; }
-.thought-card[data-category="interaction"] { --thought-accent: #3d8a7a; }
-.thought-card[data-category="philosophy"]  { --thought-accent: #8a6b3d; }
+.thought-card[data-category="layout"]      { --thought-accent: var(--category-layout); }
+.thought-card[data-category="typography"]  { --thought-accent: var(--category-typography); }
+.thought-card[data-category="color"]       { --thought-accent: var(--category-color); }
+.thought-card[data-category="motion"]      { --thought-accent: var(--category-motion); }
+.thought-card[data-category="interaction"] { --thought-accent: var(--category-interaction); }
+.thought-card[data-category="philosophy"]  { --thought-accent: var(--category-philosophy); }
 
 .thought-card__category {
   font-size: var(--text-xs);
