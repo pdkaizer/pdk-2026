@@ -417,6 +417,19 @@
   }
 }
 
+.blogroll-list__icon {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--color-bg-subtle) 0%, var(--color-accent-light) 100%);
+  color: var(--color-accent);
+  font-size: var(--text-xl);
+}
+
 .links-list__body {
   display: flex;
   flex-direction: column;

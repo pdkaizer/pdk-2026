@@ -17,6 +17,9 @@ permalink: /blogroll/
     <div class="links-list">
       {% for blog in blogroll %}
         <a class="links-list__item" href="{{ blog.url }}" target="_blank" rel="noopener noreferrer">
+          <div class="blogroll-list__icon">
+            <i class="fa-sharp-duotone fa-regular fa-book" aria-hidden="true"></i>
+          </div>
           <div class="links-list__body">
             <span class="links-list__title">{{ blog.name }}</span>
             {% if blog.note %}
