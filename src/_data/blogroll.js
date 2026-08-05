@@ -4,6 +4,7 @@ const blogroll = [
   { name: "Brilliantcrank", url: "https://brilliantcrank.com/", note: "Essays and zines on creative thinking, technology, and culture." },
   { name: "Daring Fireball", url: "https://daringfireball.net", note: "John Gruber on Apple, technology, design, and internet culture." },
   { name: "Elliott Richmond", url: "https://elliottrichmond.co.uk", note: "Elliott Richmond on WordPress and WooCommerce development." },
+  { name: "Ethan Marcotte", url: "https://ethanmarcotte.com", note: "Ethan Marcotte on responsive design, the web, and the industry." },
   { name: "Jeffrey Zeldman Presents", url: "https://zeldman.com", note: "Jeffrey Zeldman on web design, digital culture, and typography." },
   { name: "Josh W Comeau", url: "https://www.joshwcomeau.com/", note: "Josh W Comeau's tutorials and interactive guides on CSS, animation, and React." },
   { name: "Maggie Appleton's Digital Garden", url: "https://maggieappleton.com/", note: "Maggie Appleton's visual essays on programming, design, and anthropology." },
