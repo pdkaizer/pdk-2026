@@ -25,7 +25,7 @@ layout: layouts/base.njk
         data-lat="{{ lat }}"
         data-lng="{{ lng }}"
         data-token="{{ site.mapboxToken }}"
-        role="img"
+        role="region"
         aria-label="Map showing {{ location or title }}"
       ></div>
     {% endif %}
@@ -37,18 +37,31 @@ layout: layouts/base.njk
     <div class="photo-grid">
       {% for photo in photos %}
         <figure class="photo-grid__item">
-          <img
-            src="{{ photo.src }}"
-            alt="{{ photo.alt or '' }}"
-            loading="lazy"
-            decoding="async"
-          />
+          <button type="button" class="photo-grid__trigger" data-lightbox-trigger data-src="{{ photo.src }}" data-alt="{{ photo.alt or '' }}" data-caption="{{ photo.caption or '' }}" aria-label="View enlarged photo">
+            <img
+              src="{{ photo.src }}"
+              alt="{{ photo.alt or '' }}"
+              loading="lazy"
+              decoding="async"
+            />
+          </button>
           {% if photo.caption %}
             <figcaption>{{ photo.caption }}</figcaption>
           {% endif %}
         </figure>
       {% endfor %}
     </div>
+  </div>
+
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Enlarged photo" inert>
+    <button type="button" class="lightbox__close" id="lightbox-close" aria-label="Close">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true">
+        <line x1="18" y1="6" x2="6" y2="18"/>
+        <line x1="6" y1="6" x2="18" y2="18"/>
+      </svg>
+    </button>
+    <img class="lightbox__image" id="lightbox-image" src="" alt="" />
+    <p class="lightbox__caption" id="lightbox-caption"></p>
   </div>
 {% endif %}
 

@@ -132,6 +132,52 @@ searchToggle.addEventListener('click', () => {
   siteHeader.hasAttribute('data-search-open') ? closeSearch() : openSearch();
 });
 
+// Lightbox (photo galleries)
+const lightbox = document.getElementById('lightbox');
+
+if (lightbox) {
+  const lightboxImage = document.getElementById('lightbox-image');
+  const lightboxCaption = document.getElementById('lightbox-caption');
+  const lightboxClose = document.getElementById('lightbox-close');
+  let lightboxTrigger = null;
+
+  function openLightbox(trigger) {
+    lightboxTrigger = trigger;
+    lightboxImage.src = trigger.dataset.src;
+    lightboxImage.alt = trigger.dataset.alt || '';
+    lightboxCaption.textContent = trigger.dataset.caption || '';
+    lightbox.removeAttribute('inert');
+    lightbox.setAttribute('data-open', '');
+    document.documentElement.style.overflow = 'hidden';
+    lightboxClose.focus();
+  }
+
+  function closeLightbox() {
+    lightbox.setAttribute('inert', '');
+    lightbox.removeAttribute('data-open');
+    document.documentElement.style.overflow = '';
+    lightboxImage.src = '';
+    if (lightboxTrigger) {
+      lightboxTrigger.focus();
+      lightboxTrigger = null;
+    }
+  }
+
+  document.querySelectorAll('[data-lightbox-trigger]').forEach((trigger) => {
+    trigger.addEventListener('click', () => openLightbox(trigger));
+  });
+
+  lightboxClose.addEventListener('click', closeLightbox);
+
+  lightbox.addEventListener('click', (e) => {
+    if (e.target === lightbox) closeLightbox();
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightbox.hasAttribute('data-open')) closeLightbox();
+  });
+}
+
 // Mastodon share (federated — ask for the reader's instance once, then remember it)
 document.querySelectorAll('[data-mastodon-share]').forEach((button) => {
   button.addEventListener('click', () => {
