@@ -9,7 +9,8 @@
     "build": "npm-run-all build:css build:11ty build:search",
     "build:css": "postcss src/assets/css/main.css -o _site/assets/css/main.css",
     "build:11ty": "eleventy",
-    "build:search": "pagefind --site _site"
+    "build:search": "pagefind --site _site",
+    "new-gallery": "node scripts/new-gallery.js"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",

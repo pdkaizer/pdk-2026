@@ -35,10 +35,20 @@
       <link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/v3.9.0/mapbox-gl.css" />
     {% endif %}
     <script>
-      // Apply saved theme before paint to prevent flash
-      if (localStorage.getItem('theme') === 'dark') {
-        document.documentElement.setAttribute('data-theme', 'dark');
-      }
+      // Apply theme before paint to prevent flash. An explicit user choice
+      // (from the theme toggle) always wins; otherwise fall back to time of
+      // day — dark outside 7am-7pm — so it's a sensible default until the
+      // reader overrides it.
+      (function () {
+        var stored = localStorage.getItem('theme');
+        var isDark = stored ? stored === 'dark' : (function () {
+          var hour = new Date().getHours();
+          return hour < 7 || hour >= 19;
+        })();
+        if (isDark) {
+          document.documentElement.setAttribute('data-theme', 'dark');
+        }
+      })();
     </script>
     <!-- Privacy-friendly analytics by Plausible -->
     <script async src="https://plausible.io/js/pa-t3qiw2luDQMAuCwm2q2OR.js"></script>
