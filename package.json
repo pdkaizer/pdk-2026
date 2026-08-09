@@ -10,7 +10,8 @@
     "build:css": "postcss src/assets/css/main.css -o _site/assets/css/main.css",
     "build:11ty": "eleventy",
     "build:search": "pagefind --site _site",
-    "new-gallery": "node scripts/new-gallery.js"
+    "new-gallery": "node scripts/new-gallery.js",
+    "new-thought": "node scripts/new-thought.js"
   },
   "devDependencies": {
     "@11ty/eleventy": "^3.0.0",
