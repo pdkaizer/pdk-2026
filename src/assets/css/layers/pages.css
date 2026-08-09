@@ -161,6 +161,7 @@ article:has(.thought-hero) .prose p {
 .thought-hero__category[data-category="motion"]      { --thought-accent: var(--category-motion); }
 .thought-hero__category[data-category="interaction"] { --thought-accent: var(--category-interaction); }
 .thought-hero__category[data-category="philosophy"]  { --thought-accent: var(--category-philosophy); }
+.thought-hero__category[data-category="language"]    { --thought-accent: var(--category-language); }
 
 .thought-hero__title {
   font-family: var(--font-serif);

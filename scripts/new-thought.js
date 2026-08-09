@@ -15,10 +15,10 @@ const THOUGHTS_DIR = path.join(ROOT, 'src/thoughts');
 const OG_IMAGES_DIR = path.join(ROOT, 'src/assets/images/thoughts');
 const OG_EXTENSIONS = ['.png', '.jpg', '.jpeg', '.webp'];
 
-// Matches the six accent colors defined in src/assets/css/layers/base.css
+// Matches the accent colors defined in src/assets/css/layers/base.css
 // (--category-*). Any other value still works, it just falls back to the
 // muted text color instead of getting its own accent.
-const CATEGORIES = ['Layout', 'Typography', 'Color', 'Motion', 'Interaction', 'Philosophy'];
+const CATEGORIES = ['Layout', 'Typography', 'Color', 'Motion', 'Interaction', 'Philosophy', 'Language'];
 
 function slugify(input) {
   return input

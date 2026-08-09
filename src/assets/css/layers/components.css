@@ -1039,6 +1039,7 @@
 .thought-card[data-category="motion"]      { --thought-accent: var(--category-motion); }
 .thought-card[data-category="interaction"] { --thought-accent: var(--category-interaction); }
 .thought-card[data-category="philosophy"]  { --thought-accent: var(--category-philosophy); }
+.thought-card[data-category="language"]    { --thought-accent: var(--category-language); }
 
 .thought-card__category {
   font-size: var(--text-xs);
