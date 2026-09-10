@@ -8,6 +8,7 @@ lat: 38.8899
 lng: -77.0091
 date: 2018-01-01
 order: 1
+featured: true
 photos:
   - src: /assets/images/US-capital/us-capital-2019-1.jpg
     alt: First photo

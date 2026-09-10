@@ -11,6 +11,7 @@ themeToggle.addEventListener('click', () => {
     root.setAttribute('data-theme', 'dark');
     localStorage.setItem('theme', 'dark');
   }
+  document.dispatchEvent(new CustomEvent('themechange', { detail: { isDark: !isDark } }));
 });
 
 // Nav toggle (hamburger flyout)

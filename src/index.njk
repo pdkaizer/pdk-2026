@@ -92,7 +92,8 @@ ogImage: /assets/images/pdk-og-image.png
 </section>
 {% endif %}
 
-{% if collections.photoGalleries | length %}
+{% set featuredGalleries = collections.photoGalleries | featured %}
+{% if featuredGalleries | length %}
 <section class="l-wrapper l-section">
   <div class="section-header">
     <p class="section-label">Selected photos</p>
@@ -100,7 +101,7 @@ ogImage: /assets/images/pdk-og-image.png
   </div>
 
   <div class="l-grid">
-    {% for gallery in collections.photoGalleries | limit(2) %}
+    {% for gallery in featuredGalleries | limit(2) %}
       <a class="gallery-card" href="{{ gallery.url }}">
         <div class="gallery-card__image">
           {% if gallery.data.cover %}

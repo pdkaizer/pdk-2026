@@ -19,7 +19,16 @@ if (mapEl) {
 
   map.addControl(new mapboxgl.AttributionControl({ compact: true }));
 
-  new mapboxgl.Marker({ color: isDark ? '#c8956a' : '#5c4b3b' })
+  let marker = new mapboxgl.Marker({ color: isDark ? '#c8956a' : '#5c4b3b' })
     .setLngLat([lng, lat])
     .addTo(map);
+
+  document.addEventListener('themechange', (event) => {
+    const nowDark = event.detail.isDark;
+    map.setStyle(nowDark ? 'mapbox://styles/mapbox/dark-v11' : 'mapbox://styles/mapbox/light-v11');
+    marker.remove();
+    marker = new mapboxgl.Marker({ color: nowDark ? '#c8956a' : '#5c4b3b' })
+      .setLngLat([lng, lat])
+      .addTo(map);
+  });
 }

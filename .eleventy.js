@@ -49,6 +49,8 @@ module.exports = function (eleventyConfig) {
 
   eleventyConfig.addFilter("limit", (arr, n) => arr.slice(0, n));
 
+  eleventyConfig.addFilter("featured", (arr) => arr.filter((item) => item.data.featured));
+
   eleventyConfig.addFilter("currentYear", () => new Date().getFullYear());
 
   eleventyConfig.addFilter("rssDate", (date) => new Date(date).toUTCString());
