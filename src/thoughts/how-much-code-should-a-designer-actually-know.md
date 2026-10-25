@@ -1,6 +1,12 @@
 ---
 title: How Much Code Should a Designer Actually Know?
 category: Code
+description: "AI writes the code now. The bar didn’t drop: it moved from writing code to reviewing it, and to describing exactly what to build."
+tags:
+  - AI
+  - code
+  - design systems
+  - development
 date: 2026-10-25
 ogImage: /assets/images/thoughts/how-much-code-should-a-designer-actually-know.png
 ---
