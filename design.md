@@ -95,6 +95,8 @@ Used for Thought cards/heroes to visually distinguish categories. Set via inline
 | `motion` | `#7a5e8a` (purple) |
 | `interaction` | `#3d8a7a` (teal) |
 | `philosophy` | `#8a6b3d` (brown/gold) |
+| `language` | `#c6473b` (red) |
+| `code` | `#a8467a` (magenta) |
 
 ### Typography
 

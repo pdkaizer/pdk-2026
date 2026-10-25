@@ -18,6 +18,7 @@
   --category-interaction: #377c6d;
   --category-philosophy: #8a6b3d;
   --category-language: #c6473b;
+  --category-code: #a8467a;
 
   /* Typography */
   --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
@@ -76,6 +77,7 @@
   --category-interaction: #3e8c7c;
   --category-philosophy: #9d7a46;
   --category-language: #cd5d53;
+  --category-code: #c66aa0;
 }
 
 /* Global base styles */
