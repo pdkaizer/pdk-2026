@@ -47,6 +47,12 @@ layout: layouts/base.njk
       <button type="button" class="btn btn--secondary" data-mastodon-share data-share-text="{{ title }}" data-share-url="{{ shareUrl }}" aria-label="Share on Mastodon">
         Share to: <i class="fa-brands fa-mastodon" aria-hidden="true"></i>
       </button>
+      <a class="btn btn--secondary" href="https://x.com/intent/post?text={{ title | urlencode }}&amp;url={{ shareUrl | urlencode }}" target="_blank" rel="noopener noreferrer" aria-label="Share on X">
+        Share to: <i class="fa-brands fa-x-twitter" aria-hidden="true"></i>
+      </a>
+      <a class="btn btn--secondary" href="https://www.linkedin.com/sharing/share-offsite/?url={{ shareUrl | urlencode }}" target="_blank" rel="noopener noreferrer" aria-label="Share on LinkedIn">
+        Share to: <i class="fa-brands fa-linkedin-in" aria-hidden="true"></i>
+      </a>
     </div>
   </div>
 </article>
