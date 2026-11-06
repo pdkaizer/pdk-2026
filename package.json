@@ -6,9 +6,10 @@
     "start": "npm-run-all --parallel dev:*",
     "dev:11ty": "eleventy --serve",
     "dev:css": "postcss src/assets/css/main.css -o _site/assets/css/main.css --watch",
-    "build": "npm-run-all build:css build:11ty build:search",
+    "build": "npm-run-all build:css build:11ty build:md build:search",
     "build:css": "postcss src/assets/css/main.css -o _site/assets/css/main.css",
     "build:11ty": "eleventy",
+    "build:md": "node scripts/html-to-markdown.js",
     "build:search": "pagefind --site _site",
     "new-gallery": "node scripts/new-gallery.js",
     "new-thought": "node scripts/new-thought.js"
@@ -20,7 +21,8 @@
     "postcss": "^8.0.0",
     "postcss-cli": "^11.0.0",
     "postcss-import": "^16.0.0",
-    "postcss-nesting": "^13.0.0"
+    "postcss-nesting": "^13.0.0",
+    "turndown": "^7.2.0"
   },
   "dependencies": {
     "@11ty/eleventy-fetch": "^5.1.3",
