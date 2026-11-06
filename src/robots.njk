@@ -5,7 +5,13 @@ eleventyExcludeFromCollections: true
 # robots.txt for {{ site.url }}
 # Spec: https://www.rfc-editor.org/rfc/rfc9309
 
+# Content Signals (https://contentsignals.org/)
+# search:   building a search index and linking to results — yes
+# ai-input: using content in real-time AI answers (RAG, grounding) — yes
+# ai-train: training or fine-tuning AI models — no
+
 User-agent: *
+Content-Signal: search=yes, ai-input=yes, ai-train=no
 Allow: /
 Disallow: /pagefind/
 
