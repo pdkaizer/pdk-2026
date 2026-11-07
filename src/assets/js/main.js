@@ -133,6 +133,51 @@ searchToggle.addEventListener('click', () => {
   siteHeader.hasAttribute('data-search-open') ? closeSearch() : openSearch();
 });
 
+// WebMCP: expose site search as a tool for in-browser AI agents
+// (https://webmachinelearning.github.io/webmcp/). Only runs in browsers that
+// implement the API; older Chrome builds put it on navigator.
+const modelContext = document.modelContext || navigator.modelContext;
+
+if (modelContext?.registerTool) {
+  const stripTags = (html) => html.replace(/<[^>]*>/g, '');
+
+  Promise.resolve(
+    modelContext.registerTool({
+      name: 'search_site',
+      title: 'Search peterkaizer.com',
+      description:
+        "Full-text search of Peter Kaizer's portfolio site: product design case studies, design thoughts, articles, photo galleries and about pages. Returns matching pages with title, URL and an excerpt. Request a URL with 'Accept: text/markdown' to read a page as markdown.",
+      inputSchema: {
+        type: 'object',
+        properties: {
+          query: { type: 'string', description: 'Words to search for, e.g. "design systems".' },
+          limit: { type: 'integer', minimum: 1, maximum: 20, default: 5, description: 'Maximum number of results.' },
+        },
+        required: ['query'],
+      },
+      annotations: { readOnlyHint: true },
+      async execute({ query, limit = 5 }) {
+        const term = String(query ?? '').trim();
+        if (!term) return { error: 'query is required', results: [] };
+        const pf = await loadPagefind();
+        if (!pf) return { error: 'Search is unavailable right now.', results: [] };
+        const { results } = await pf.search(term);
+        const count = Math.min(Math.max(Number(limit) || 5, 1), 20);
+        const items = await Promise.all(results.slice(0, count).map((r) => r.data()));
+        return {
+          query: term,
+          total: results.length,
+          results: items.map((item) => ({
+            title: item.meta?.title || item.url,
+            url: new URL(item.url, location.origin).href,
+            excerpt: stripTags(item.excerpt),
+          })),
+        };
+      },
+    })
+  ).catch((err) => console.warn('[webmcp] Could not register search_site:', err));
+}
+
 // Lightbox (photo galleries)
 const lightbox = document.getElementById('lightbox');
 
