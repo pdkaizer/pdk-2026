@@ -1,0 +1,23 @@
+---
+permalink: /.well-known/agent-skills/index.json
+eleventyExcludeFromCollections: true
+skills:
+  - name: read-peterkaizer-com
+    description: How to read and cite peterkaizer.com, the portfolio of product designer Peter Kaizer. Use when looking up Peter Kaizer's work, case studies, design thoughts, articles or photo galleries, or answering questions about him.
+---
+{#- Agent Skills Discovery RFC v0.2.0. Skill files live in src/agent-skills/ and
+    are copied unchanged, so the digest of the source file matches the served file. -#}
+{
+  "$schema": "https://schemas.agentskills.io/discovery/0.2.0/schema.json",
+  "skills": [
+    {%- for skill in skills %}
+    {
+      "name": {{ skill.name | dump | safe }},
+      "type": "skill-md",
+      "description": {{ skill.description | dump | safe }},
+      "url": "/.well-known/agent-skills/{{ skill.name }}/SKILL.md",
+      "digest": "sha256:{{ ('src/agent-skills/' + skill.name + '/SKILL.md') | sha256File }}"
+    }{% if not loop.last %},{% endif %}
+    {%- endfor %}
+  ]
+}

@@ -9,6 +9,17 @@ module.exports = function (eleventyConfig) {
   eleventyConfig.addPassthroughCopy("src/assets/js");
   eleventyConfig.addPassthroughCopy("src/assets/images");
 
+  // Agent skills: copied byte-for-byte (not processed as templates) so the
+  // sha256 digests in /.well-known/agent-skills/index.json stay accurate.
+  eleventyConfig.addPassthroughCopy({ "src/agent-skills": ".well-known/agent-skills" });
+  eleventyConfig.ignores.add("src/agent-skills/**");
+  eleventyConfig.addFilter("sha256File", (file) =>
+    require("node:crypto")
+      .createHash("sha256")
+      .update(require("node:fs").readFileSync(file))
+      .digest("hex")
+  );
+
   // Collections
   eleventyConfig.addCollection("caseStudies", (collectionApi) =>
     collectionApi
