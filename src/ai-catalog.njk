@@ -1,0 +1,52 @@
+---
+permalink: /.well-known/ai-catalog.json
+eleventyExcludeFromCollections: true
+---
+{#- Agentic Resource Discovery (ARD) catalog: https://agenticresourcediscovery.org/
+    Served with Access-Control-Allow-Origin: * (see netlify.toml). -#}
+{%- set domain = site.url | replace("https://", "") -%}
+{
+  "specVersion": "1.0",
+  "host": {
+    "displayName": {{ site.author | dump | safe }},
+    "identifier": "did:web:{{ domain }}"
+  },
+  "entries": [
+    {
+      "identifier": "urn:air:{{ domain }}:skills:read-peterkaizer-com",
+      "displayName": "How to read peterkaizer.com",
+      "description": "Agent skill explaining how to read and cite this portfolio: markdown versions of pages, the sitemap and feed, site sections and usage rules.",
+      "type": "text/markdown",
+      "url": "{{ site.url }}/.well-known/agent-skills/read-peterkaizer-com/SKILL.md",
+      "representativeQueries": [
+        "How do I read Peter Kaizer's portfolio as markdown?",
+        "What content is on peterkaizer.com?",
+        "Can I use peterkaizer.com content in AI answers?"
+      ]
+    },
+    {
+      "identifier": "urn:air:{{ domain }}:feeds:rss",
+      "displayName": "Articles and thoughts feed",
+      "description": "RSS feed of Peter Kaizer's articles and short design thoughts, newest first.",
+      "type": "application/rss+xml",
+      "url": "{{ site.url }}/feed.xml",
+      "representativeQueries": [
+        "Latest writing from Peter Kaizer",
+        "Peter Kaizer design thoughts RSS feed",
+        "Recent articles on product design by Peter Kaizer"
+      ]
+    },
+    {
+      "identifier": "urn:air:{{ domain }}:sitemaps:main",
+      "displayName": "Sitemap",
+      "description": "XML sitemap listing every page on peterkaizer.com: case studies, thoughts, photo galleries and about pages.",
+      "type": "application/xml",
+      "url": "{{ site.url }}/sitemap.xml",
+      "representativeQueries": [
+        "List all pages on peterkaizer.com",
+        "Peter Kaizer product design case studies",
+        "Peter Kaizer photo galleries"
+      ]
+    }
+  ]
+}

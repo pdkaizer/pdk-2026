@@ -7,3 +7,9 @@
   for = "/"
   [headers.values]
     Link = '</feed.xml>; rel="alternate"; type="application/rss+xml"; title="Peter Kaizer", </about/>; rel="author"'
+
+# Agent discovery manifests: readable from any origin
+[[headers]]
+  for = "/.well-known/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"

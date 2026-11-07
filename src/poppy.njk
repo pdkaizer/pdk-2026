@@ -1,0 +1,14 @@
+---
+permalink: /.well-known/poppy.json
+eleventyExcludeFromCollections: true
+---
+{#- Personal Agent Protocol discovery: https://personalagentprotocol.org/docs/spec#3-discovery
+    Website-only declaration (web: {}), so no auth issuer is needed. -#}
+{
+  "protocol_version": "0.1",
+  "organization": {
+    "name": {{ site.author | dump | safe }},
+    "domain": "{{ site.url | replace("https://", "") }}"
+  },
+  "web": {}
+}
